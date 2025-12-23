@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_nodes_dynamic" Id="{f36e4b25-e98d-42da-856b-f20f15698aa6}">
+    <Declaration><![CDATA[VAR_GLOBAL
+//--- Scalars
+	// A one bit value (true or false).
+    dyn_scalar_BOOL          : BOOL;            
+	// A one bit value (true or false).
+    dyn_scalar_BOOL_trigger  : BOOL;            
+	// An 8 bit signed integer value.
+    dyn_scalar_I1            : SINT;               
+	// An 8 bit unsigned integer value.
+    dyn_scalar_UI1           : USINT;              
+	// A 16 bit signed integer value.
+    dyn_scalar_I2            : INT;              
+	// A 16 bit unsigned integer value.
+    dyn_scalar_UI2           : UINT;              
+	// A 32 bit signed integer value.
+    dyn_scalar_I4            : DINT;               
+	// A 32 bit unsigned integer value.
+    dyn_scalar_UI4           : UDINT;              
+	// A 64 bit signed integer value.
+    dyn_scalar_I8            : LINT;               
+	// A 64 bit unsigned integer value.
+    dyn_scalar_UI8           : ULINT;              
+	// Bit string of length 8.
+    dyn_scalar_BYTE          : BYTE;          
+	// Bit string of length 16.
+    dyn_scalar_WORD          : WORD;         
+	// Bit string of length 32.
+    dyn_scalar_DWORD         : DWORD;    
+	// Bit string of length 64.
+    dyn_scalar_LWORD         : LWORD;  
+	// IEEE 754 single precision (32 bit).
+    dyn_scalar_R4            : REAL;             
+	// IEEE 754 double precision (64 bit).
+    dyn_scalar_R8            : LREAL;             
+	// Interval in milliseconds (vendor‑specific range).
+    dyn_scalar_TIME          : TIME;            
+	// Used as a date only (time = 00:00:00).
+    dyn_scalar_DATE          : DATE;               
+	// Milliseconds since day‑start (00:00:00.000–23:59:59.999).
+    dyn_scalar_TOD           : TOD;               
+	// Same as TOD, named TIME_OF_DAY.
+    dyn_scalar_TIME_OF_DAY   : TIME_OF_DAY;       
+	// Date + time (vendor‑specific range/resolution).
+    dyn_scalar_DT            : DT;     
+	// Same as DT, named DATE_AND_TIME. 
+    dyn_scalar_DATE_AND_TIME : DATE_AND_TIME;     
+    // Variable-length single-byte character string.
+    dyn_scalar_STR           : STRING;
+	// Variable‑length double‑byte character string.
+    dyn_scalar_WSTRING       : WSTRING;  
+
+//--- 1‑dim Arrays
+    dyn_1dim_BOOL          			: ARRAY [0..ARRSIZEX] OF BOOL;
+    dyn_1dim_I1            			: ARRAY [0..ARRSIZEX] OF SINT;
+    dyn_1dim_I1_Huge       			: ARRAY [0..ARRSIZEHUGE] OF SINT;
+    dyn_1dim_UI1           			: ARRAY [0..ARRSIZEX] OF USINT;
+    dyn_1dim_I2            			: ARRAY [0..ARRSIZEX] OF INT;
+    dyn_1dim_UI2           			: ARRAY [0..ARRSIZEX] OF UINT;
+    dyn_1dim_I4            			: ARRAY [0..ARRSIZEX] OF DINT;
+    dyn_1dim_I4_Huge       			: ARRAY [0..ARRSIZEHUGE] OF DINT;
+    dyn_1dim_UI4           			: ARRAY [0..ARRSIZEX] OF UDINT;
+    dyn_1dim_I8            			: ARRAY [0..ARRSIZEX] OF LINT;
+    dyn_1dim_UI8           			: ARRAY [0..ARRSIZEX] OF ULINT;
+    dyn_1dim_BYTE          			: ARRAY [0..ARRSIZEX] OF BYTE;
+    dyn_1dim_WORD          			: ARRAY [0..ARRSIZEX] OF WORD;
+    dyn_1dim_DWORD         			: ARRAY [0..ARRSIZEX] OF DWORD;
+    dyn_1dim_LWORD         			: ARRAY [0..ARRSIZEX] OF LWORD;
+    dyn_1dim_R4            			: ARRAY [0..ARRSIZEX] OF REAL;
+    dyn_1dim_R8            			: ARRAY [0..ARRSIZEX] OF LREAL;
+    dyn_1dim_TIME          			: ARRAY [0..ARRSIZEX] OF TIME;
+    dyn_1dim_DATE          			: ARRAY [0..ARRSIZEX] OF DATE;
+    dyn_1dim_TOD           			: ARRAY [0..ARRSIZEX] OF TOD;
+    dyn_1dim_TIME_OF_DAY   			: ARRAY [0..ARRSIZEX] OF TIME_OF_DAY;
+    dyn_1dim_DT            			: ARRAY [0..ARRSIZEX] OF DT;
+    dyn_1dim_DATE_AND_TIME 			: ARRAY [0..ARRSIZEX] OF DATE_AND_TIME;
+    dyn_1dim_STR          	 		: ARRAY [0..ARRSIZEX] OF STRING;
+	dyn_1dim_WSTRING      	 		: ARRAY [0..ARRSIZEX] OF WSTRING;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

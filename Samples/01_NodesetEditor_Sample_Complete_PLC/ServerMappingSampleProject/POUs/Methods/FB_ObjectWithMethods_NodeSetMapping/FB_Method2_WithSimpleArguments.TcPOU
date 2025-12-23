@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Method2_WithSimpleArguments" Id="{78cbaa24-945a-48ce-a16b-98509433f064}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'OPC.UA.DA.JobMethod' := 'Method2_WithSimpleArguments'}
+FUNCTION_BLOCK PUBLIC FB_Method2_WithSimpleArguments
+VAR
+	// Timer to simulate job execution
+	timer : TON := (PT:=T#4S);
+	
+	// Variables to determine if a job has been started (Start() method has been called) or finished
+	jobRunning : BOOL;
+
+	// State machine variable
+	state : UDINT;
+	
+	//Values of method specific input parameters:
+	bArgIn : BOOL;
+	nArgIn : INT;
+	sArgIn : STRING;
+	eArgIn : E_Enum_1;
+	
+	//Values of method specific output parameters:
+	bArgOut : BOOL;
+	nArgOut : INT;
+	sArgOut : STRING;
+	eArgOut : E_Enum_1;
+	
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE state OF
+	0:
+		IF jobRunning THEN
+			state := state + 1;
+		END_IF
+		
+	1:	//Logic of method in here:
+		timer(IN:=TRUE);
+		IF timer.Q THEN
+			
+			//Set Inputs To Outputs
+			bArgOut := bArgIn;
+			nArgOut := nArgIn;
+			sArgOut := sArgIn;
+			eArgOut := eArgIn;
+			
+			timer(IN:=FALSE);
+			jobRunning := FALSE;
+			state := 0;
+		END_IF
+		
+END_CASE]]></ST>
+    </Implementation>
+    <Method Name="Abort" Id="{bd47b204-ea61-4599-831d-3955bd52e3c7}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC Abort : HRESULT
+VAR_INPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="CheckState" Id="{2eb6a495-996a-44ed-a35d-be17841060c3}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC CheckState : HRESULT
+VAR_INPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR
+VAR_OUTPUT
+	bBusy : BOOL; // Do not change. Used by server to find out if the job is finished
+	
+	SimpleArgOut1 : BOOL;
+	SimpleArgOut2 : INT;
+	SimpleArgOut3 : STRING;
+	SimpleArgOut4 : E_Enum_1;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF hdl <> 16#BE6780FF THEN
+	CheckState := OpcUaStatusCodes.BadInternalError; //Set return value of method
+ELSIF jobRunning THEN
+	bBusy := TRUE; // job is not finished yet
+	CheckState := OpcUaStatusCodes.Good; // done, no error occured during execution (OPC UA StatusCode "GOOD")
+ELSE
+	//Give values to outputs
+	SimpleArgOut1 := bArgOut;
+	SimpleArgOut2 := nArgOut;
+	SimpleArgOut3 := sArgOut;
+	SimpleArgOut4 := eArgOut;
+	
+	bBusy := FALSE; // job is finished
+	CheckState := OpcUaStatusCodes.Good; // done, no error occured during execution (OPC UA StatusCode "GOOD")
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{865eec6e-c218-4c08-bd07-4938235b6574}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC Start : HRESULT
+VAR_INPUT
+	SimpleArgIn1 : BOOL;
+	SimpleArgIn2 : INT;
+	SimpleArgIn3 : STRING;
+	SimpleArgIn4 : E_Enum_1;
+END_VAR
+VAR_OUTPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF jobRunning THEN
+	Start := OpcUaStatusCodes.Bad;
+ELSE
+	//Give inputs to functionblock body
+	bArgIn := SimpleArgIn1;
+	nArgIn := SimpleArgIn2;
+	sArgIn := SimpleArgIn3;
+	eArgIn := SimpleArgIn4;
+	
+	hdl := 16#BE6780FF; //static because concurrent calls are disabled by checking jobRunning
+	jobRunning := TRUE;
+	Start := OpcUaStatusCodes.Good; //Set return value of method
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Method2_WithSimpleArguments">
+      <LineId Id="1" Count="21" />
+    </LineIds>
+    <LineIds Name="FB_Method2_WithSimpleArguments.Abort">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Method2_WithSimpleArguments.CheckState">
+      <LineId Id="20" Count="4" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="13" Count="2" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="4" Count="0" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="5" Count="1" />
+    </LineIds>
+    <LineIds Name="FB_Method2_WithSimpleArguments.Start">
+      <LineId Id="13" Count="2" />
+      <LineId Id="21" Count="3" />
+      <LineId Id="19" Count="1" />
+      <LineId Id="25" Count="1" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="10" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

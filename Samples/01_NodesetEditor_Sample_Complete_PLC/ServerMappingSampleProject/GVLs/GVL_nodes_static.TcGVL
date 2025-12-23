@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_nodes_static" Id="{2d757ea9-5f4e-4ca0-8dad-0a37993fda23}">
+    <Declaration><![CDATA[VAR_GLOBAL
+//--- Scalars
+    // A one bit value (true or false).
+    stat_scalar_BOOL                  : BOOL;
+    // An 8 bit signed integer value.
+    stat_scalar_I1                    : SINT;
+    // An 8 bit unsigned integer value.
+    stat_scalar_UI1                   : USINT;
+    // A 16 bit signed integer value.
+    stat_scalar_I2                    : INT;
+    // A 16 bit unsigned integer value.
+    stat_scalar_UI2                   : UINT;
+    // A 32 bit signed integer value.
+    stat_scalar_I4                    : DINT;
+    // A 32 bit unsigned integer value.
+    stat_scalar_UI4                   : UDINT;
+    // A 64 bit signed integer value.
+    stat_scalar_I8                    : LINT;
+    // A 64 bit unsigned integer value.
+    stat_scalar_UI8                   : ULINT;
+    // Bit string of length 8.
+    stat_scalar_BYTE                  : BYTE;
+    // Bit string of length 16.
+    stat_scalar_WORD                  : WORD;
+    // Bit string of length 32.
+    stat_scalar_DWORD                 : DWORD;
+    // Bit string of length 64.
+    stat_scalar_LWORD                 : LWORD;
+    // IEEE 754 single precision (32 bit).
+    stat_scalar_R4                    : REAL;
+    // IEEE 754 double precision (64 bit).
+    stat_scalar_R8                    : LREAL;
+    // Interval in milliseconds.
+    stat_scalar_TIME                  : TIME;
+    // Date only (time = 00:00:00).
+    stat_scalar_DATE                  : DATE;
+    // Milliseconds since day-start.
+    stat_scalar_TOD                   : TOD;
+    // Same as TOD, named TIME_OF_DAY.
+    stat_scalar_TIME_OF_DAY           : TIME_OF_DAY;
+    // Date + time.
+    stat_scalar_DT                    : DT;
+    // Same as DT, named DATE_AND_TIME.
+    stat_scalar_DATE_AND_TIME         : DATE_AND_TIME;
+	// Variable-length single-byte character string.
+    stat_scalar_STR                   : STRING;
+	// Variable-length double-byte character string.
+    stat_scalar_WSTRING               : WSTRING;
+
+//--- 1-dim Arrays
+    stat_1dim_BOOL   : ARRAY [0..ARRSIZEX] OF BOOL;
+    stat_1dim_I1     : ARRAY [0..ARRSIZEX] OF SINT;
+    stat_1dim_UI1    : ARRAY [0..ARRSIZEX] OF USINT;
+    stat_1dim_I2     : ARRAY [0..ARRSIZEX] OF INT;
+    stat_1dim_UI2    : ARRAY [0..ARRSIZEX] OF UINT;
+    stat_1dim_I4     : ARRAY [0..ARRSIZEX] OF DINT;
+    stat_1dim_UI4    : ARRAY [0..ARRSIZEX] OF UDINT;
+    stat_1dim_I8     : ARRAY [0..ARRSIZEX] OF LINT;
+    stat_1dim_UI8    : ARRAY [0..ARRSIZEX] OF ULINT;
+    stat_1dim_BYTE   : ARRAY [0..ARRSIZEX] OF BYTE;
+    stat_1dim_WORD   : ARRAY [0..ARRSIZEX] OF WORD;
+    stat_1dim_DWORD  : ARRAY [0..ARRSIZEX] OF DWORD;
+    stat_1dim_LWORD  : ARRAY [0..ARRSIZEX] OF LWORD;
+    stat_1dim_R4     : ARRAY [0..ARRSIZEX] OF REAL;
+    stat_1dim_R8     : ARRAY [0..ARRSIZEX] OF LREAL;
+    stat_1dim_TIME   : ARRAY [0..ARRSIZEX] OF TIME;
+    stat_1dim_DATE   : ARRAY [0..ARRSIZEX] OF DATE;
+    stat_1dim_TOD    : ARRAY [0..ARRSIZEX] OF TOD;
+    stat_1dim_TIME_OF_DAY : ARRAY [0..ARRSIZEX] OF TIME_OF_DAY;
+    stat_1dim_DT    : ARRAY [0..ARRSIZEX] OF DT;
+    stat_1dim_DATE_AND_TIME : ARRAY [0..ARRSIZEX] OF DATE_AND_TIME;
+    stat_1dim_STR  : ARRAY [0..ARRSIZEX] OF STRING;
+    stat_1dim_WSTRING : ARRAY [0..ARRSIZEX] OF WSTRING;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

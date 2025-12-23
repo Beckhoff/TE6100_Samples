@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="PRG_Dynamic" Id="{f47a6e91-8ae4-4c58-8719-5ee04fd610ef}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Dynamic
+VAR
+	k: INT;
+	l: INT;
+	m: INT;
+	t: INT;
+	
+	timer_1s : TON := (PT:=T#1S);
+	timer_2s : TON := (PT:=T#2S);
+	timer_30s : TON := (PT:=T#30S);
+	timer_100ms : TON := (PT:=T#100MS);
+	
+	idxEndChar :INT := 0;
+	idxStartChar :INT := 1;
+	
+	nTextMode :INT := 0;	
+	i : DINT := 0;
+	
+	sWordsU : WSTRING :=  "Hello OpcUA. Greetings from BECKHOFF AUTOMATION GmbH";
+	sWordsA : STRING :=  'Hello OpcUA. Greetings from BECKHOFF AUTOMATION GmbH';	
+	
+	_up_ix : DINT;       
+    _up_jx : DINT;       
+    _amsLast : USINT := 1;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Settings.UpdateTimer(IN:=TRUE);
+timer_100ms(IN:=TRUE);
+timer_1s(IN:=TRUE);
+timer_2s(IN:=TRUE);
+timer_30s(IN:=TRUE);
+
+GVL_mapping_with_nodeset.MyObjectWithMethods();
+
+IF timer_2s.Q THEN
+    timer_2s(IN:=FALSE);
+    GVL_nodes_dynamic.dyn_scalar_BOOL_trigger := NOT GVL_nodes_dynamic.dyn_scalar_BOOL_trigger;
+END_IF
+
+IF timer_100ms.Q THEN
+    CASE nTextMode OF
+        0:        
+            idxStartChar := 1;
+            idxEndChar := idxEndChar + 1;
+            IF idxEndChar > LEN(sWordsA) THEN
+                idxEndChar := LEN(sWordsA);
+                idxStartChar := 1;    
+                nTextMode := 1;
+            END_IF
+        1:
+            idxEndChar := LEN(sWordsA);
+            idxStartChar := idxStartChar + 1;
+            IF idxStartChar >= LEN(sWordsA) THEN
+                idxStartChar := 1;    
+                idxEndChar := 0;        
+                nTextMode := 0;
+            END_IF
+    END_CASE     
+END_IF
+
+IF Settings.UpdateTimer.Q THEN
+    Settings.UpdateTimer(IN:=FALSE);
+    
+    (* Update scalar variables with new values *)
+    GVL_nodes_dynamic.dyn_scalar_BOOL                  := NOT GVL_nodes_dynamic.dyn_scalar_BOOL;
+    GVL_nodes_dynamic.dyn_scalar_I1                    := GVL_nodes_dynamic.dyn_scalar_I1             + 1;
+    GVL_nodes_dynamic.dyn_scalar_UI1                   := GVL_nodes_dynamic.dyn_scalar_UI1            + 1;
+    GVL_nodes_dynamic.dyn_scalar_I2                    := GVL_nodes_dynamic.dyn_scalar_I2             + 1;
+    GVL_nodes_dynamic.dyn_scalar_UI2                   := GVL_nodes_dynamic.dyn_scalar_UI2            + 1;
+    GVL_nodes_dynamic.dyn_scalar_I4                    := GVL_nodes_dynamic.dyn_scalar_I4             + 1;
+    GVL_nodes_dynamic.dyn_scalar_UI4                   := GVL_nodes_dynamic.dyn_scalar_UI4            + 1;
+    GVL_nodes_dynamic.dyn_scalar_I8                    := GVL_nodes_dynamic.dyn_scalar_I8             + 1;
+    GVL_nodes_dynamic.dyn_scalar_UI8                   := GVL_nodes_dynamic.dyn_scalar_UI8            + 1;
+    GVL_nodes_dynamic.dyn_scalar_BYTE                  := GVL_nodes_dynamic.dyn_scalar_BYTE           + 1;
+    GVL_nodes_dynamic.dyn_scalar_WORD                  := GVL_nodes_dynamic.dyn_scalar_WORD           + 1;
+    GVL_nodes_dynamic.dyn_scalar_DWORD                 := GVL_nodes_dynamic.dyn_scalar_DWORD          + 1;
+    GVL_nodes_dynamic.dyn_scalar_LWORD                 := GVL_nodes_dynamic.dyn_scalar_LWORD          + 1;
+    GVL_nodes_dynamic.dyn_scalar_R4                    := GVL_nodes_dynamic.dyn_scalar_R4             + 0.1;
+    GVL_nodes_dynamic.dyn_scalar_R8                    := GVL_nodes_dynamic.dyn_scalar_R8             + 0.1;
+    GVL_nodes_dynamic.dyn_scalar_TIME                  := GVL_nodes_dynamic.dyn_scalar_TIME           + T#1H1M1S;
+    GVL_nodes_dynamic.dyn_scalar_DATE                  := GVL_nodes_dynamic.dyn_scalar_DATE           + T#1D1H1M1S;
+    GVL_nodes_dynamic.dyn_scalar_TOD                   := GVL_nodes_dynamic.dyn_scalar_TOD            + T#1H1M1S;
+    GVL_nodes_dynamic.dyn_scalar_TIME_OF_DAY           := GVL_nodes_dynamic.dyn_scalar_TIME_OF_DAY    + T#1H1M1S;
+    GVL_nodes_dynamic.dyn_scalar_DT                    := GVL_nodes_dynamic.dyn_scalar_DT             + T#1D1H1M1S;
+    GVL_nodes_dynamic.dyn_scalar_DATE_AND_TIME         := GVL_nodes_dynamic.dyn_scalar_DATE_AND_TIME  + T#1D1H1M1S;
+    
+    (* Update string variables *)
+    IF timer_100ms.Q THEN
+		GVL_nodes_dynamic.dyn_scalar_STR 					:= MID(STR:=sWordsA, POS:=idxStartChar, LEN:=idxEndChar);        
+		GVL_nodes_dynamic.dyn_scalar_WSTRING 				:= WMID(STR:=sWordsU, POS:=idxStartChar, LEN:=idxEndChar);
+    END_IF
+    
+    (* Update 1-dimensional arrays *)
+    FOR k := 0 TO ARRSIZEHUGE DO
+        GVL_nodes_dynamic.dyn_1dim_I1_Huge[k] := GVL_nodes_dynamic.dyn_1dim_I1_Huge[k] + 1;
+        GVL_nodes_dynamic.dyn_1dim_I4_Huge[k] := GVL_nodes_dynamic.dyn_1dim_I4_Huge[k] + 1;
+    END_FOR
+    
+	FOR k := 0 TO ARRSIZEX DO
+		GVL_nodes_dynamic.dyn_1dim_BOOL[k]           := NOT GVL_nodes_dynamic.dyn_1dim_BOOL[k];
+		GVL_nodes_dynamic.dyn_1dim_I1[k]             := GVL_nodes_dynamic.dyn_1dim_I1[k]             + 1;              
+		GVL_nodes_dynamic.dyn_1dim_UI1[k]            := GVL_nodes_dynamic.dyn_1dim_UI1[k]            + 1;              
+		GVL_nodes_dynamic.dyn_1dim_I2[k]             := GVL_nodes_dynamic.dyn_1dim_I2[k]             + 1;              
+		GVL_nodes_dynamic.dyn_1dim_UI2[k]            := GVL_nodes_dynamic.dyn_1dim_UI2[k]            + 1;              
+		GVL_nodes_dynamic.dyn_1dim_I4[k]             := GVL_nodes_dynamic.dyn_1dim_I4[k]             + 1;              
+		GVL_nodes_dynamic.dyn_1dim_UI4[k]            := GVL_nodes_dynamic.dyn_1dim_UI4[k]            + 1;              
+		GVL_nodes_dynamic.dyn_1dim_I8[k]             := GVL_nodes_dynamic.dyn_1dim_I8[k]             + 1;              
+		GVL_nodes_dynamic.dyn_1dim_UI8[k]            := GVL_nodes_dynamic.dyn_1dim_UI8[k]            + 1;              
+		GVL_nodes_dynamic.dyn_1dim_BYTE[k]           := GVL_nodes_dynamic.dyn_1dim_BYTE[k]           + 1;              
+		GVL_nodes_dynamic.dyn_1dim_WORD[k]           := GVL_nodes_dynamic.dyn_1dim_WORD[k]           + 1;              
+		GVL_nodes_dynamic.dyn_1dim_DWORD[k]          := GVL_nodes_dynamic.dyn_1dim_DWORD[k]          + 1;              
+		GVL_nodes_dynamic.dyn_1dim_LWORD[k]          := GVL_nodes_dynamic.dyn_1dim_LWORD[k]          + 1;              
+		GVL_nodes_dynamic.dyn_1dim_R4[k]             := GVL_nodes_dynamic.dyn_1dim_R4[k]             + 0.1;            
+		GVL_nodes_dynamic.dyn_1dim_R8[k]             := GVL_nodes_dynamic.dyn_1dim_R8[k]             + 0.1;            
+		GVL_nodes_dynamic.dyn_1dim_TIME[k]           := GVL_nodes_dynamic.dyn_1dim_TIME[k]           + T#1H1M1S;
+		GVL_nodes_dynamic.dyn_1dim_DATE[k]           := GVL_nodes_dynamic.dyn_1dim_DATE[k]           + T#1D1H1M1S;     
+		GVL_nodes_dynamic.dyn_1dim_TOD[k]            := GVL_nodes_dynamic.dyn_1dim_TOD[k]            + T#1H1M1S;       
+		GVL_nodes_dynamic.dyn_1dim_TIME_OF_DAY[k]    := GVL_nodes_dynamic.dyn_1dim_TIME_OF_DAY[k]    + T#1H1M1S;       
+		GVL_nodes_dynamic.dyn_1dim_DT[k]             := GVL_nodes_dynamic.dyn_1dim_DT[k]             + T#1H1M1S;       
+		GVL_nodes_dynamic.dyn_1dim_DATE_AND_TIME[k]  := GVL_nodes_dynamic.dyn_1dim_DATE_AND_TIME[k]  + T#1H1M1S;       
+	
+		FOR i := LOWER_BOUND(dyn_1dim_STR, 1) TO UPPER_BOUND(dyn_1dim_STR, 1) DO
+			dyn_1dim_STR[i] := dyn_scalar_STR;
+		END_FOR
+	
+		FOR i := LOWER_BOUND(dyn_1dim_WSTRING, 1) TO UPPER_BOUND(dyn_1dim_WSTRING, 1) DO
+			dyn_1dim_WSTRING[i] := dyn_scalar_WSTRING;
+		END_FOR
+		
+	END_FOR
+	
+	IF( timer_100ms.Q ) THEN
+		(* Update structured Types*)
+		
+		(* ST_Complex_1 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType1.x   := NextEnum_E_Enum_1(GVL_mapping_with_Nodeset.dyn_structuredType1.x);
+		GVL_mapping_with_Nodeset.dyn_structuredType1.a   := GVL_mapping_with_Nodeset.dyn_structuredType1.a + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType1.b   := GVL_mapping_with_Nodeset.dyn_structuredType1.b - 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType1.str := GVL_nodes_dynamic.dyn_scalar_STR;
+		
+		(* ST_Complex_2 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType2.c1 := GVL_mapping_with_Nodeset.dyn_structuredType1;
+		GVL_mapping_with_Nodeset.dyn_structuredType2.s_5 := LEFT(GVL_nodes_dynamic.dyn_scalar_STR, 5);
+		GVL_mapping_with_Nodeset.dyn_structuredType2.e   := NextEnum_E_Enum_1(GVL_mapping_with_Nodeset.dyn_structuredType2.e);
+		GVL_mapping_with_Nodeset.dyn_structuredType2.s_3 := LEFT(GVL_nodes_dynamic.dyn_scalar_STR, 3);
+		
+		FOR _up_ix := LOWER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType2.cArr, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType2.cArr, 1) DO
+			GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix] := GVL_mapping_with_Nodeset.dyn_structuredType1;
+			GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].a := GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].a + _up_ix;
+			GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].b := GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].b - _up_ix;
+			GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].x := NextEnum_E_Enum_1(GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].x);
+			GVL_mapping_with_Nodeset.dyn_structuredType2.cArr[_up_ix].str := GVL_nodes_dynamic.dyn_scalar_STR;
+		END_FOR
+		
+		FOR _up_ix := LOWER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType2.iArr, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType2.iArr, 1) DO
+			GVL_mapping_with_Nodeset.dyn_structuredType2.iArr[_up_ix] := GVL_mapping_with_Nodeset.dyn_structuredType2.iArr[_up_ix] + 1;
+		END_FOR
+		
+		(* ST_Complex_3 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.port := SEL(GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.port >= 65530, 851, GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.port + 1);
+		_amsLast := SEL(_amsLast >= 254, 1, _amsLast + 1);
+		
+		IF (GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[0] = 0) THEN
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[0] := 10;
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[1] := 10;
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[2] := 10;
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[3] := 10;
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[4] := 1;
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[5] := 1;
+		ELSIF GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[5] >= 254 THEN
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[5] := 1;
+		ELSE
+			GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[5] := GVL_mapping_with_Nodeset.dyn_structuredType3.stAmsAddr.netId[5] + 1;
+		END_IF;
+		
+		(* ST_Complex_4 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType4.ErrorID := NextEnum_E_Enum_1(GVL_mapping_with_Nodeset.dyn_structuredType4.ErrorID);
+		
+		(* ST_Complex_5 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType5.a := GVL_mapping_with_Nodeset.dyn_structuredType5.a + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType5.b := GVL_mapping_with_Nodeset.dyn_structuredType5.b + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType5.c := GVL_mapping_with_Nodeset.dyn_structuredType5.c + 0.1;
+		GVL_mapping_with_Nodeset.dyn_structuredType5.d := GVL_mapping_with_Nodeset.dyn_structuredType5.d + 0.1;
+		GVL_mapping_with_Nodeset.dyn_structuredType5.e := GVL_nodes_dynamic.dyn_scalar_STR;
+		GVL_mapping_with_Nodeset.dyn_structuredType5.f := GVL_mapping_with_Nodeset.dyn_structuredType5.f + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType5.g := NOT GVL_mapping_with_Nodeset.dyn_structuredType5.g;
+		
+		(* ST_Complex_6 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType6.a := GVL_mapping_with_Nodeset.dyn_structuredType6.a + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType6.b := GVL_mapping_with_Nodeset.dyn_structuredType6.b + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType6.c := GVL_mapping_with_Nodeset.dyn_structuredType6.c + 0.1;
+		GVL_mapping_with_Nodeset.dyn_structuredType6.d := GVL_mapping_with_Nodeset.dyn_structuredType6.d + 0.1;
+		GVL_mapping_with_Nodeset.dyn_structuredType6.e := GVL_mapping_with_Nodeset.dyn_structuredType6.e + 1;
+		GVL_mapping_with_Nodeset.dyn_structuredType6.f := NOT GVL_mapping_with_Nodeset.dyn_structuredType6.f;
+		
+		(* ST_Complex_7 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType7.a := GVL_mapping_with_Nodeset.dyn_structuredType7.a + 0.1;
+		GVL_mapping_with_Nodeset.dyn_structuredType7.b := GVL_mapping_with_Nodeset.dyn_structuredType7.b + 0.1;
+		GVL_mapping_with_Nodeset.dyn_structuredType7.c := GVL_mapping_with_Nodeset.dyn_structuredType7.c - 0.1;
+		
+		(* ST_Complex_8 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType8.stComplex  := GVL_mapping_with_Nodeset.dyn_structuredType1;
+		GVL_mapping_with_Nodeset.dyn_structuredType8.strString5 := LEFT(GVL_nodes_dynamic.dyn_scalar_STR, 5);
+		GVL_mapping_with_Nodeset.dyn_structuredType8.eEnum      := NextEnum_E_Enum_1(GVL_mapping_with_Nodeset.dyn_structuredType8.eEnum);
+		GVL_mapping_with_Nodeset.dyn_structuredType8.strString3 := LEFT(GVL_nodes_dynamic.dyn_scalar_STR, 3);
+		
+		FOR _up_ix := LOWER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex, 1) DO
+			GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex[_up_ix] := GVL_mapping_with_Nodeset.dyn_structuredType1;
+			GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex[_up_ix].a := GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex[_up_ix].a + _up_ix;
+			GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex[_up_ix].x := NextEnum_E_Enum_1(GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex[_up_ix].x);
+			GVL_mapping_with_Nodeset.dyn_structuredType8.arrComplex[_up_ix].str := GVL_nodes_dynamic.dyn_scalar_STR;
+		END_FOR
+		
+		FOR _up_ix := LOWER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType8.arrDint, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.dyn_structuredType8.arrDint, 1) DO
+			GVL_mapping_with_Nodeset.dyn_structuredType8.arrDint[_up_ix] := GVL_mapping_with_Nodeset.dyn_structuredType8.arrDint[_up_ix] + 1;
+		END_FOR
+		
+		(* ST_Complex_9 *)
+		GVL_mapping_with_Nodeset.dyn_structuredType9.bBool := NOT GVL_mapping_with_Nodeset.dyn_structuredType9.bBool;
+		GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitOne.value := NOT GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitOne.value;
+		GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitOne.valid := NOT GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitOne.valid;
+		GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitTwo.value := NOT GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitTwo.value;
+		GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitTwo.valid := NOT GVL_mapping_with_Nodeset.dyn_structuredType9.stOptionSetSample.BitOne.valid;
+		
+		(* ST_Complex_10 *)
+		GVL_mapping_with_nodeset.dyn_structuredType10.nNumber := GVL_mapping_with_nodeset.dyn_structuredType10.nNumber + 1;
+		//EUInformation is not dynamic
+	END_IF
+END_IF
+
+
+
+
+IF( timer_100ms.Q ) THEN
+	timer_100ms( in:=FALSE );
+END_IF;
+
+IF( timer_1s.Q ) THEN
+	timer_1s( in:=FALSE );
+END_IF;
+
+IF( timer_30s.Q ) THEN
+	timer_30s( in:=FALSE );
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_Dynamic">
+      <LineId Id="1018" Count="4" />
+      <LineId Id="1024" Count="7" />
+      <LineId Id="1530" Count="18" />
+      <LineId Id="1051" Count="5" />
+      <LineId Id="1241" Count="0" />
+      <LineId Id="1243" Count="14" />
+      <LineId Id="1259" Count="0" />
+      <LineId Id="1261" Count="1" />
+      <LineId Id="1265" Count="1" />
+      <LineId Id="1084" Count="2" />
+      <LineId Id="1088" Count="0" />
+      <LineId Id="1274" Count="1" />
+      <LineId Id="1092" Count="6" />
+      <LineId Id="1278" Count="15" />
+      <LineId Id="1423" Count="0" />
+      <LineId Id="1296" Count="0" />
+      <LineId Id="1298" Count="1" />
+      <LineId Id="1302" Count="1" />
+      <LineId Id="1557" Count="0" />
+      <LineId Id="1564" Count="5" />
+      <LineId Id="1306" Count="0" />
+      <LineId Id="1311" Count="1" />
+      <LineId Id="1570" Count="0" />
+      <LineId Id="1674" Count="1" />
+      <LineId Id="1673" Count="0" />
+      <LineId Id="1574" Count="26" />
+      <LineId Id="1670" Count="0" />
+      <LineId Id="1653" Count="0" />
+      <LineId Id="1655" Count="6" />
+      <LineId Id="1666" Count="3" />
+      <LineId Id="1602" Count="48" />
+      <LineId Id="1676" Count="2" />
+      <LineId Id="1680" Count="0" />
+      <LineId Id="1672" Count="0" />
+      <LineId Id="647" Count="0" />
+      <LineId Id="1421" Count="1" />
+      <LineId Id="1419" Count="1" />
+      <LineId Id="701" Count="9" />
+      <LineId Id="198" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

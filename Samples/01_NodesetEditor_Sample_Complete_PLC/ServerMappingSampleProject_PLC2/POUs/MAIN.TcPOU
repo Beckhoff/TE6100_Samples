@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{b6492232-ba91-4826-9f0c-6fb2ce0a01de}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	//From this PLC only simple types can be mapped, because tmc is not enabled. 
+	//For complex types and methods to work, tmc would need to be enabled. 
+	//Also the DA-Config from the server would need this plc to be configured for the tmc to be loaded upon startup.
+	
+	bBoolFromSecondsAdsDevice : BOOL;// Boolean variable toggling based on timer
+    fbTon : TON; // Timer function block
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Timer settings: 500 milliseconds time delay
+fbTon(IN:= TRUE, PT:= T#500ms);
+
+// Toggle logic
+IF fbTon.Q THEN
+    bBoolFromSecondsAdsDevice := NOT bBoolFromSecondsAdsDevice;
+    fbTon(IN:= FALSE); // Reset the timer
+END_IF
+
+// Restart the timer
+IF NOT fbTon.IN THEN
+    fbTon(IN:= TRUE);
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="15" Count="11" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

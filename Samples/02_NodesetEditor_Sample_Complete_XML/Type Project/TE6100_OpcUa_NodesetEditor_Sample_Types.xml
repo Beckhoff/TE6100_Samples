@@ -1,0 +1,1278 @@
+﻿<UANodeSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ua="http://unifiedautomation.com/Configuration/NodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/" Version="1.0.0" PublicationDate="2025-03-21T10:26:39Z">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.04" PublicationDate="2024-12-01T00:00:00Z" />
+  </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="Boolean">i=1</Alias>
+    <Alias Alias="Byte">i=3</Alias>
+    <Alias Alias="Int16">i=4</Alias>
+    <Alias Alias="UInt16">i=5</Alias>
+    <Alias Alias="Int32">i=6</Alias>
+    <Alias Alias="Float">i=10</Alias>
+    <Alias Alias="Double">i=11</Alias>
+    <Alias Alias="String">i=12</Alias>
+    <Alias Alias="DateTime">i=13</Alias>
+    <Alias Alias="LocalizedText">i=21</Alias>
+    <Alias Alias="Number">i=26</Alias>
+    <Alias Alias="HasModellingRule">i=37</Alias>
+    <Alias Alias="HasEncoding">i=38</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="HasSubtype">i=45</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+    <Alias Alias="AccessRestrictionType">i=95</Alias>
+    <Alias Alias="IdType">i=256</Alias>
+    <Alias Alias="NumericRange">i=291</Alias>
+    <Alias Alias="Argument">i=296</Alias>
+    <Alias Alias="EUInformation">i=887</Alias>
+    <Alias Alias="EnumValueType">i=7594</Alias>
+    <Alias Alias="E_Enum_1">ns=1;i=3001</Alias>
+    <Alias Alias="E_Operation">ns=1;i=3003</Alias>
+    <Alias Alias="UA_OptionSet_Sample">ns=1;s=#Type|UA_OptionSet_Sample</Alias>
+    <Alias Alias="AMSADDR">ns=1;s=&lt;StructuredDataType&gt;:AMSADDR</Alias>
+    <Alias Alias="ST_Complex_1">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</Alias>
+  </Aliases>
+  <Extensions>
+    <Extension>
+      <TwinCAT DateSaved="2025-08-13T10:25:18Z" VersionSaved="2.1.5.0"/>
+    </Extension>
+  </Extensions>
+  <UAObject NodeId="ns=1;i=5000" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_9</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5001" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5002" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_2</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5003" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_4</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5004" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_5</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5005" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5006" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_7</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5007" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_8</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5008" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_MathematicResults</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5009" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_MathOperation</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5010" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:AMSADDR</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5011" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_3</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5012" BrowseName="1:http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/" SymbolicName="http___beckhoff_com_UA_TE6100_OpcUa_NodesetEditor_Sample_Types_" ParentNodeId="i=11715">
+    <DisplayName>http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6000</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6029</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6030</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6031</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6032</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6033</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6034</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6035</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=11616</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">i=11715</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5013" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=#Type|UA_OptionSet_Sample</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5014" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=#Type|UA_OptionSet_Sample</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5015" BrowseName="Default XML" SymbolicName="DefaultXML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_9</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5017" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_10</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3006</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:AMSADDR__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:AMSADDR</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_10__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_10</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_2__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_2</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_3__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_3</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_4__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_4</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_5__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_5</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_6__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_7__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_7</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_8__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_8</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_MathematicResults__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_MathematicResults</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_MathOperation__DefaultBinary" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;s=&lt;StructuredDataType&gt;:ST_MathOperation</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=6000" BrowseName="DefaultAccessRestrictions" ParentNodeId="ns=1;i=5012" DataType="AccessRestrictionType">
+    <DisplayName>DefaultAccessRestrictions</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6001" BrowseName="OptionSetValues" ParentNodeId="UA_OptionSet_Sample" DataType="LocalizedText" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>OptionSetValues</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=#Type|UA_OptionSet_Sample</Reference>
+    </References>
+    <Value>
+      <uax:ListOfLocalizedText>
+        <uax:LocalizedText>
+          <uax:Text>BitOne</uax:Text>
+        </uax:LocalizedText>
+        <uax:LocalizedText>
+          <uax:Text>BitTwo</uax:Text>
+        </uax:LocalizedText>
+      </uax:ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6029" BrowseName="IsNamespaceSubset" ParentNodeId="ns=1;i=5012" DataType="Boolean">
+    <DisplayName>IsNamespaceSubset</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+    <Value>
+      <uax:Boolean>false</uax:Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6030" BrowseName="NamespacePublicationDate" ParentNodeId="ns=1;i=5012" DataType="DateTime">
+    <DisplayName>NamespacePublicationDate</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+    <Value>
+      <uax:DateTime>2025-03-21T10:26:39Z</uax:DateTime>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6031" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=5012" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+    <Value>
+      <uax:String>http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/</uax:String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6032" BrowseName="NamespaceVersion" ParentNodeId="ns=1;i=5012" DataType="String">
+    <DisplayName>NamespaceVersion</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+    <Value>
+      <uax:String>1.0.0</uax:String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6033" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=5012" DataType="IdType" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>StaticNodeIdTypes</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6034" BrowseName="StaticNumericNodeIdRange" ParentNodeId="ns=1;i=5012" DataType="NumericRange" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>StaticNumericNodeIdRange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6035" BrowseName="StaticStringNodeIdPattern" ParentNodeId="ns=1;i=5012" DataType="String">
+    <DisplayName>StaticStringNodeIdPattern</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6036" BrowseName="InputArguments" ParentNodeId="ns=1;i=7002" DataType="Argument" ValueRank="1" ArrayDimensions="4">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7002</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn1</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn2</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=6</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn3</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=12</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn4</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;i=3001</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6037" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7002" DataType="Argument" ValueRank="1" ArrayDimensions="4">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7002</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut1</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut2</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=6</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut3</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=12</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut4</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;i=3001</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6038" BrowseName="InputArguments" ParentNodeId="ns=1;i=7003" DataType="Argument" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7003</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>StructuredArgIn</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6039" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7003" DataType="Argument" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7003</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>StructuredArgOut</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>-1</uax:ValueRank>
+              <uax:ArrayDimensions />
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6040" BrowseName="InputArguments" ParentNodeId="ns=1;i=7004" DataType="Argument" ValueRank="1" ArrayDimensions="4">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7004</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn1</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn2</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=6</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn3</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=12</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgIn4</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;i=3001</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6041" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7004" DataType="Argument" ValueRank="1" ArrayDimensions="4">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7004</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut1</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut2</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=6</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut3</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>i=12</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>SimpleArgOut4</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;i=3001</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6042" BrowseName="InputArguments" ParentNodeId="ns=1;i=7005" DataType="Argument" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7005</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>StructuredArgIn</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6043" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7005" DataType="Argument" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7005</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=297</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:Argument>
+              <uax:Name>StructuredArgOut</uax:Name>
+              <uax:DataType>
+                <uax:Identifier>ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1</uax:Identifier>
+              </uax:DataType>
+              <uax:ValueRank>1</uax:ValueRank>
+              <uax:ArrayDimensions>
+                <uax:UInt32>10</uax:UInt32>
+              </uax:ArrayDimensions>
+              <uax:Description />
+            </uax:Argument>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=#Type|E_Enum_1.EnumValues" BrowseName="EnumValues" ParentNodeId="E_Enum_1" DataType="EnumValueType" ValueRank="1" ArrayDimensions="6">
+    <DisplayName>EnumValues</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3001</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>0</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>ZERO</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>1</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>ONE</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>2</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>TWO</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>3</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>THREE</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>13</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>THIRTEEN</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>42</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>the_answer_to_life_the_universe_and_everything</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=#Type|E_Enum_2.EnumValues" BrowseName="EnumValues" ParentNodeId="ns=1;i=3002" DataType="EnumValueType" ValueRank="1" ArrayDimensions="6">
+    <DisplayName>EnumValues</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3002</Reference>
+    </References>
+    <Value>
+      <uax:ListOfExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>0</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>ZERO</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>1</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>ONE</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>2</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>TWO</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>3</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>THREE</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>13</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>THIRTEEN</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+        <uax:ExtensionObject>
+          <uax:TypeId>
+            <uax:Identifier>i=7616</uax:Identifier>
+          </uax:TypeId>
+          <uax:Body>
+            <uax:EnumValueType>
+              <uax:Value>42</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>the_answer_to_life_the_universe_and_everything</uax:Text>
+              </uax:DisplayName>
+              <uax:Description />
+            </uax:EnumValueType>
+          </uax:Body>
+        </uax:ExtensionObject>
+      </uax:ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=#Type|E_Operation.EnumStrings" BrowseName="EnumStrings" ParentNodeId="E_Operation" DataType="LocalizedText" ValueRank="1" ArrayDimensions="4">
+    <DisplayName>EnumStrings</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3003</Reference>
+    </References>
+    <Value>
+      <uax:ListOfLocalizedText>
+        <uax:LocalizedText>
+          <uax:Text>Addition</uax:Text>
+        </uax:LocalizedText>
+        <uax:LocalizedText>
+          <uax:Text>Substract</uax:Text>
+        </uax:LocalizedText>
+        <uax:LocalizedText>
+          <uax:Text>Multiply</uax:Text>
+        </uax:LocalizedText>
+        <uax:LocalizedText>
+          <uax:Text>Divide</uax:Text>
+        </uax:LocalizedText>
+      </uax:ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7001" BrowseName="1:Method1_WithoutArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method1_WithoutArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7002" BrowseName="1:Method2_WithSimpleArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method2_WithSimpleArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6036</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6037</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7003" BrowseName="1:Method3_WithStructuredArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method3_WithStructuredArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6038</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6039</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7004" BrowseName="1:Method4_WithArrayOfSimpleArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method4_WithArrayOfSimpleArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6040</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6041</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7005" BrowseName="1:Method5_WithArrayOfStructuredArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method5_WithArrayOfStructuredArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6042</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6043</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+  </UAMethod>
+  <UAObjectType NodeId="ns=1;i=1003" BrowseName="1:ObjectWithMethods">
+    <DisplayName>ObjectWithMethods</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=7001</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7002</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7003</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7004</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7005</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UADataType NodeId="ns=1;i=3001" BrowseName="1:E_Enum_1">
+    <DisplayName>E_Enum_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;s=#Type|E_Enum_1.EnumValues</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="1:E_Enum_1">
+      <Field Name="ZERO" Value="0" />
+      <Field Name="ONE" Value="1" />
+      <Field Name="TWO" Value="2" />
+      <Field Name="THREE" Value="3" />
+      <Field Name="THIRTEEN" Value="13" />
+      <Field Name="the_answer_to_life_the_universe_and_everything" Value="42" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=3002" BrowseName="1:E_Enum_2">
+    <DisplayName>E_Enum_2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;s=#Type|E_Enum_2.EnumValues</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="1:E_Enum_2">
+      <Field Name="ZERO" Value="0" />
+      <Field Name="ONE" Value="1" />
+      <Field Name="TWO" Value="2" />
+      <Field Name="THREE" Value="3" />
+      <Field Name="THIRTEEN" Value="13" />
+      <Field Name="the_answer_to_life_the_universe_and_everything" Value="42" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=3003" BrowseName="1:E_Operation">
+    <DisplayName>E_Operation</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;s=#Type|E_Operation.EnumStrings</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="1:E_Operation">
+      <Field Name="Addition" Value="0" />
+      <Field Name="Substract" Value="1" />
+      <Field Name="Multiply" Value="2" />
+      <Field Name="Divide" Value="3" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=#Type|UA_OptionSet_Sample" BrowseName="1:UA_OptionSet_Sample">
+    <DisplayName>UA_OptionSet_Sample</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5013</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5014</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=12755</Reference>
+    </References>
+    <Definition Name="1:UA_OptionSet_Sample" IsOptionSet="true">
+      <Field Name="BitOne" Value="0" />
+      <Field Name="BitTwo" Value="1" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:AMSADDR" BrowseName="1:AMSADDR">
+    <DisplayName>AMSADDR</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:AMSADDR__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5010</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:AMSADDR">
+      <Field Name="netId" DataType="Byte" ValueRank="1" ArrayDimensions="6" />
+      <Field Name="port" DataType="UInt16" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1" BrowseName="1:ST_Complex_1">
+    <DisplayName>ST_Complex_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_1__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5001</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_1">
+      <Field Name="x" DataType="E_Enum_1" />
+      <Field Name="a" DataType="Int32" />
+      <Field Name="str" DataType="String" />
+      <Field Name="b" DataType="Int32" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_2" BrowseName="1:ST_Complex_2">
+    <DisplayName>ST_Complex_2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_2__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5002</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_2">
+      <Field Name="c1" DataType="ST_Complex_1" />
+      <Field Name="s_5" DataType="String" />
+      <Field Name="e" DataType="E_Enum_1" />
+      <Field Name="s_3" DataType="String" />
+      <Field Name="cArr" DataType="ST_Complex_1" ValueRank="1" ArrayDimensions="6" />
+      <Field Name="iArr" DataType="Int32" ValueRank="1" ArrayDimensions="101" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_3" BrowseName="1:ST_Complex_3">
+    <DisplayName>ST_Complex_3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_3__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5011</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_3">
+      <Field Name="stAmsAddr" DataType="AMSADDR" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_4" BrowseName="1:ST_Complex_4">
+    <DisplayName>ST_Complex_4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_4__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5003</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_4">
+      <Field Name="ErrorID" DataType="E_Enum_1" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_5" BrowseName="1:ST_Complex_5">
+    <DisplayName>ST_Complex_5</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_5__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5004</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_5">
+      <Field Name="a" DataType="Int16" />
+      <Field Name="b" DataType="Int32" />
+      <Field Name="c" DataType="Float" />
+      <Field Name="d" DataType="Double" />
+      <Field Name="e" DataType="String" />
+      <Field Name="f" DataType="Int16" />
+      <Field Name="g" DataType="Boolean" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_6" BrowseName="1:ST_Complex_6">
+    <DisplayName>ST_Complex_6</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_6__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_6">
+      <Field Name="a" DataType="Int16" />
+      <Field Name="b" DataType="Int32" />
+      <Field Name="c" DataType="Float" />
+      <Field Name="d" DataType="Double" />
+      <Field Name="e" DataType="Int16" />
+      <Field Name="f" DataType="Boolean" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_7" BrowseName="1:ST_Complex_7">
+    <DisplayName>ST_Complex_7</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_7__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_7">
+      <Field Name="a" DataType="Double" />
+      <Field Name="b" DataType="Float" />
+      <Field Name="c" DataType="Float" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_8" BrowseName="1:ST_Complex_8">
+    <DisplayName>ST_Complex_8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_8__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5007</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_8">
+      <Field Name="stComplex" DataType="ST_Complex_1" />
+      <Field Name="strString5" DataType="String" />
+      <Field Name="eEnum" DataType="E_Enum_1" />
+      <Field Name="strString3" DataType="String" />
+      <Field Name="arrComplex" DataType="ST_Complex_1" ValueRank="1" ArrayDimensions="2" />
+      <Field Name="arrDint" DataType="Int32" ValueRank="1" ArrayDimensions="101" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_9" BrowseName="1:ST_Complex_9">
+    <DisplayName>ST_Complex_9</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5015</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_9">
+      <Field Name="bBool" DataType="Boolean" />
+      <Field Name="stOptionSetSample" DataType="UA_OptionSet_Sample" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_10" BrowseName="1:ST_Complex_10">
+    <DisplayName>ST_Complex_10</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_Complex_10__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5017</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_Complex_10">
+      <Field Name="nNumber" DataType="Int32" AllowSubTypes="true" />
+      <Field Name="stEUInformation" DataType="EUInformation" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_MathematicResults" BrowseName="1:ST_MathematicResults">
+    <DisplayName>ST_MathematicResults</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_MathematicResults__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5008</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_MathematicResults">
+      <Field Name="Sum" DataType="Double" />
+      <Field Name="Diff" DataType="Double" />
+      <Field Name="Prod" DataType="Double" />
+      <Field Name="Quo" DataType="Double" />
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;s=&lt;StructuredDataType&gt;:ST_MathOperation" BrowseName="1:ST_MathOperation">
+    <DisplayName>ST_MathOperation</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;s=&lt;StructuredDataType&gt;:ST_MathOperation__DefaultBinary</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5009</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:ST_MathOperation">
+      <Field Name="operator" DataType="E_Operation" />
+      <Field Name="a" DataType="Double" />
+      <Field Name="b" DataType="Double" />
+    </Definition>
+  </UADataType>
+</UANodeSet>

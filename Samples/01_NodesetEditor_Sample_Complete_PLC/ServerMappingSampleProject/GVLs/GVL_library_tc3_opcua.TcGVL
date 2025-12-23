@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_library_tc3_opcua" Id="{85f31993-25cd-4dec-83ac-dc4025e51445}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+//Tc3_OpcUa_Types
+
+    // Primitive Aliase
+    stat_UA_Boolean        : UA_Boolean        := TRUE;
+    stat_UA_SByte          : UA_SByte          := -8;         
+    stat_UA_DateTime       : UA_DateTime       := DT#1979-10-12-12:34:56;
+    stat_UA_Double         : UA_Double         := 64.64;
+    stat_UA_Float          : UA_Float          := 32.32;
+    stat_UA_Int16          : UA_Int16          := -16;
+    stat_UA_Int32          : UA_Int32          := -32;
+    stat_UA_Int64          : UA_Int64          := -64;
+    stat_UA_LocaleID       : UA_LocaleID       := 'de-DE';
+	stat_UA_Byte           : UA_Byte           := 8;
+    stat_UA_String         : UA_String         := 'This is a UA_STRING';
+    stat_UA_UInt16         : UA_UInt16         := 16;
+    stat_UA_UInt32         : UA_UInt32         := 32;
+    stat_UA_UInt64         : UA_UInt64         := 64;
+
+    // Structures
+	(*
+	More info about EngineeringUnits can be found here: https://reference.opcfoundation.org/Core/Part8/v105/docs/5.6.3
+	For IOLink specific info: https://reference.opcfoundation.org/IOLink/v100/docs/C	
+	*)
+	
+    stat_UA_EUInformation  : UA_EUInformation  := (
+        sNamespaceURI := 'http://www.opcfoundation.org/UA/units/un/cefact',
+        nUnitId       := 4937556,
+        sDisplayName  := (
+            sLocaleID := '',
+            sText     := Tc2_Utilities.wsLiteral_TO_UTF8("kilowatt")
+        ),
+        sDescription  := (
+            sLocaleID := '',
+            sText     := Tc2_Utilities.wsLiteral_TO_UTF8("kW")
+        )
+    );
+	
+    stat_UA_LocalizedText  : UA_LocalizedText  := (
+        sLocaleID := 'de-DE',
+        sText     := Tc2_Utilities.wsLiteral_TO_UTF8("Das hier ist ein deutscher Text.")
+    );
+	
+	stat_UA_NodeId         : UA_NodeId         := (
+        xml := 'i=17'
+    );
+    
+	stat_UA_TimeZoneDataType : UA_TimeZoneDataType := (
+        nOffset                 := 2,
+        bDaylightSavingInOffset := TRUE
+    );
+    
+	stat_UA_Range          : UA_Range          := (
+        fLow  := -42.42,
+        fHigh := 42.42
+    );
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

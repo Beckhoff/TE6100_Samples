@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="UA_OptionSet_Sample" Id="{daa3661e-71ca-49b9-84ec-95c906721762}">
+    <Declaration><![CDATA[TYPE UA_OptionSet_Sample EXTENDS UA_OptionSet :
+STRUCT
+	BitOne : UA_OptionSet_Option;
+	BitTwo : UA_OptionSet_Option;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

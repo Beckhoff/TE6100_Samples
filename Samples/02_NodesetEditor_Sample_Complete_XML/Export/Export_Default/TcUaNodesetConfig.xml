@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UaNodesetConfig>
+  <Nodesets>
+    <Nodeset Hint="TE6100_OpcUa_NodesetEditor_Sample_Types" FilePath="xmlnodesets\TE6100_OpcUa_NodesetEditor_Sample_Types.xml" />
+    <Nodeset Hint="TE6100_OpcUa_NodesetEditor_Sample_Instances" FilePath="xmlnodesets\TE6100_OpcUa_NodesetEditor_Sample_Instances.xml" />
+  </Nodesets>
+</UaNodesetConfig>

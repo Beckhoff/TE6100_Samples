@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="UA_OptionSet_Option" Id="{a69bef5a-6de2-4051-ba73-52f444f4a96c}">
+    <Declaration><![CDATA[TYPE UA_OptionSet_Option :
+STRUCT
+	value : BOOL;
+	valid : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

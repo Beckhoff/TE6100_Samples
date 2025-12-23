@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_mapping_with_nodeset" Id="{5e17ce77-85fd-4553-9b1d-ea5286be27f9}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+
+//Simple types (for more refer to GVL_nodes_dynamic and GVL_nodes_static)
+	stat_bBool : BOOL;
+	stat_sString : STRING(255);	
+
+//UA_OptionSet
+	{attribute 'OPC.UA.DA' := '1'}
+	stat_UA_OptionSet_Sample : UA_OptionSet_Sample := (
+        BitOne := (
+            value := TRUE,
+            valid := FALSE
+        ),
+        BitTwo := (
+            value := FALSE,
+            valid := TRUE
+        )
+    );
+
+//Method
+	MyObjectWithMethods : FB_ObjectWithMethods_NodeSetMapping;
+	
+//Dynamic structured values
+
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_1'}
+	dyn_structuredType1 : ST_Complex_1;
+
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_2'}	
+	dyn_structuredType2 : ST_Complex_2;
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_3'}	
+	dyn_structuredType3 : ST_Complex_3;
+
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_4'}
+	dyn_structuredType4 : ST_Complex_4;	
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_5'}	
+	dyn_structuredType5 : ST_Complex_5;	
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+ 	{attribute 'OPC.UA.DA' := '1'}
+ 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_6'}	
+	dyn_structuredType6 : ST_Complex_6;	
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_7'}
+	dyn_structuredType7 : ST_Complex_7;		
+
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_8'}	
+	dyn_structuredType8 : ST_Complex_8;
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_9'}	
+	dyn_structuredType9 : ST_Complex_9;
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_10'}
+	dyn_structuredType10 : ST_Complex_10;
+	
+//Static structured values	
+
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_1'}
+	stat_structuredType1 : ST_Complex_1;
+
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_2'}
+	stat_structuredType2 : ST_Complex_2;
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+// 	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_3'}
+	stat_structuredType3 : ST_Complex_3;
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_4'}	
+	stat_structuredType4 : ST_Complex_4;	
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+// 	{attribute 'OPC.UA.DA' := '1'}
+// 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_5'}	
+	stat_structuredType5 : ST_Complex_5;	
+	
+// Pragmas specified at the type make the commented pragmas unnecessary
+ 	{attribute 'OPC.UA.DA' := '1'}
+ 	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_6'}	
+	stat_structuredType6 : ST_Complex_6;	
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_7'}
+	stat_structuredType7 : ST_Complex_7;		
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_8'}	
+	stat_structuredType8 : ST_Complex_8;	
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_9'}	
+	stat_structuredType9 : ST_Complex_9;
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_10'}
+	stat_structuredType10: ST_Complex_10;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

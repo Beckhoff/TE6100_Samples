@@ -1,0 +1,2440 @@
+﻿<UANodeSet LastModified="2025-03-21T11:23:41Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Instances/</Uri>
+    <Uri>http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Instances/" Version="1.0.0" PublicationDate="2025-03-21T11:23:02Z">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" XmlSchemaUri="http://opcfoundation.org/UA/2008/02/Types.xsd" Version="1.05.02" PublicationDate="2022-11-01T00:00:00Z" />
+      <RequiredModel ModelUri="http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/" Version="1.0.0" PublicationDate="2025-03-21T10:26:39Z" />
+    </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="Organizes">i=35</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="Argument">i=296</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="Int64">i=8</Alias>
+    <Alias Alias="UInt64">i=9</Alias>
+    <Alias Alias="Float">i=10</Alias>
+    <Alias Alias="Double">i=11</Alias>
+    <Alias Alias="Byte">i=3</Alias>
+    <Alias Alias="UInt16">i=5</Alias>
+    <Alias Alias="UInt32">i=7</Alias>
+    <Alias Alias="Boolean">i=1</Alias>
+    <Alias Alias="String">i=12</Alias>
+    <Alias Alias="DateTime">i=13</Alias>
+    <Alias Alias="SByte">i=2</Alias>
+    <Alias Alias="Int16">i=4</Alias>
+    <Alias Alias="Int32">i=6</Alias>
+    <Alias Alias="ST_Complex_1">ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_1</Alias>
+    <Alias Alias="UInteger">i=28</Alias>
+    <Alias Alias="Number">i=26</Alias>
+    <Alias Alias="Integer">i=27</Alias>
+    <Alias Alias="ByteString">i=15</Alias>
+    <Alias Alias="LocalizedText">i=21</Alias>
+    <Alias Alias="NodeId">i=17</Alias>
+  </Aliases>
+  <Extensions>
+    <Extension>
+      <TwinCAT DateCreated="2025-03-28T15:41:09Z" DateSaved="2025-08-14T12:07:53Z" VersionCreated="1.1.0.188" VersionSaved="2.1.5.0">
+        <AdsDevices>
+          <AdsDevice Id="0" Name="PLC1_ServerMappingSampleProject" NetId="127.0.0.1.1.1" Port="851" Timeout="2000" TimeSuspend="20000" />
+          <AdsDevice Id="1" Name="PLC2_ServerMappingSampleProject" NetId="127.0.0.1.1.1" Port="852" Timeout="2000" TimeSuspend="20000" />
+        </AdsDevices>
+      </TwinCAT>
+    </Extension>
+  </Extensions>
+  <UAObject NodeId="ns=1;i=1000" BrowseName="1:PLC1_ServerMappingSampleProject">
+    <DisplayName>PLC1_ServerMappingSampleProject</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1001</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1001" BrowseName="1:GVLs">
+    <DisplayName>GVLs</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1009</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1013</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1006</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1007</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1015</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1002</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1004</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1005</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1018</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1016</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1002" BrowseName="1:10_Methods">
+    <DisplayName>10_Methods</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=1003</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1003" BrowseName="1:MyObjectWithMethods">
+    <DisplayName>MyObjectWithMethods</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=7000</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7001</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7002</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7003</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7004</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=1003</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1004" BrowseName="1:01_Simple_Dynamic">
+    <DisplayName>01_Simple_Dynamic</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2057</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2058</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2060</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2069</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2070</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2071</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2073</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2074</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2076</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2079</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2081</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2083</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2086</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2087</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2078</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2080</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2084</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2088</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2089</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2011</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2090</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2094</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2082</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1005" BrowseName="1:01_Simple_Static">
+    <DisplayName>01_Simple_Static</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2151</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2153</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2155</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2156</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2157</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2158</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2159</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2160</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2161</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2168</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2169</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2170</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2171</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2172</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2174</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2175</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2176</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2177</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2178</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2179</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2154</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2152</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1006" BrowseName="1:04_Structures_Dynamic">
+    <DisplayName>04_Structures_Dynamic</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2278</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2279</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2280</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2281</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2282</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2283</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2284</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2285</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2268</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2022</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1007" BrowseName="1:04_Structures_Static">
+    <DisplayName>04_Structures_Static</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2287</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2288</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2289</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2290</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2291</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2292</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2293</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2294</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2267</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2025</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1009" BrowseName="1:02_Simple_Arrays_Dynamic">
+    <DisplayName>02_Simple_Arrays_Dynamic</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2000</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2002</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2003</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2004</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2005</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2006</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2007</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2008</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2014</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2016</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2017</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2019</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2032</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2033</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2034</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2035</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2036</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2039</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2040</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2041</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2043</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2044</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2001</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2045</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1012" BrowseName="1:PLC2_ServerMappingSampleProject">
+    <DisplayName>PLC2_ServerMappingSampleProject</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2013</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1013" BrowseName="1:02_Simple_Arrays_Static">
+    <DisplayName>02_Simple_Arrays_Static</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2239</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2240</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2241</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2242</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2243</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2245</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2246</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2247</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2248</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2249</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2256</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2257</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2258</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2259</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2260</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2261</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2262</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2264</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2266</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2263</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2265</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2238</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1015" BrowseName="1:05_Structures_Arrays_Static">
+    <DisplayName>05_Structures_Arrays_Static</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2012</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2021</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1016" BrowseName="1:08_UA_Complex_Static">
+    <DisplayName>08_UA_Complex_Static</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2030</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2049</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2050</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2051</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2052</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2053</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=1018" BrowseName="1:07_UA_Simple_Static">
+    <DisplayName>07_UA_Simple_Static</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2047</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2046</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2042</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2037</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2031</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2054</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2023</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2024</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2026</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2020</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2018</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2015</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2010</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=2009</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=2000" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_BOOL" DataType="Boolean" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_BOOL</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BOOL" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_BOOL" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2001" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_STR" DataType="String" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_STR</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="STRING" ArrayDimensions="11" AdsByteLength="81" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_STR" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2002" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_BYTE" DataType="Byte" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_BYTE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BYTE" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_BYTE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2003" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_DATE" DataType="DateTime" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_DATE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_DATE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2004" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_DATE_AND_TIME" DataType="DateTime" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_DATE_AND_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_DATE_AND_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2005" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_DT" DataType="DateTime" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_DT</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_DT" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2006" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_DWORD" DataType="UInt32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_DWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DWORD" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_DWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2007" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_I1" DataType="SByte" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_I1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="SINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_I1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2008" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_I1_Huge" DataType="SByte" ValueRank="1" ArrayDimensions="10001" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_I1_Huge</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="SINT" ArrayDimensions="10001" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_I1_Huge" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2009" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Boolean" DataType="Boolean" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Boolean</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BOOL" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Boolean" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2010" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Byte" DataType="Byte" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Byte</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="USINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Byte" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2011" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_DT" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_DT</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_DT" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2012" BrowseName="1:GVL_arrays.arrStComplex" DataType="ST_Complex_1" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_arrays.arrStComplex</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1015</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_arrays.arrStComplex" AdsType="BIGTYPE" AdsByteLength="93" ArrayDimensions="11" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2013" BrowseName="1:MAIN.bBoolFromSecondsAdsDevice" DataType="Boolean" AccessLevel="3">
+    <DisplayName>MAIN.bBoolFromSecondsAdsDevice</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1012</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="1" AdsType="BOOL" AdsSymbolName="MAIN.bBoolFromSecondsAdsDevice" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2014" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_I2" DataType="Int16" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_I2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="INT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_I2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2015" BrowseName="1:GVL_library_tc3_opcua.stat_UA_DateTime" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_DateTime</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_DateTime" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2016" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_I4" DataType="Int32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_I4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_I4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2017" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_I4_Huge" DataType="Int32" ValueRank="1" ArrayDimensions="10001" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_I4_Huge</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DINT" ArrayDimensions="10001" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_I4_Huge" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2018" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Double" DataType="Double" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Double</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LREAL" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Double" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2019" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_I8" DataType="Int64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_I8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_I8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2020" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Float" DataType="Float" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Float</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="REAL" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Float" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2021" BrowseName="1:GVL_arrays.arrStComplex2" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_2" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_arrays.arrStComplex2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1015</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_arrays.arrStComplex2" AdsType="BIGTYPE" AdsByteLength="1069" ArrayDimensions="11" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2022" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType10" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_10" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType10</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType10" AdsType="BIGTYPE" AdsByteLength="617" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2023" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Int64" DataType="Int64" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Int64</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Int64" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2024" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Int32" DataType="Int32" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Int32</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Int32" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2025" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType10" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_10" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType10</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType10" AdsType="BIGTYPE" AdsByteLength="617" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2026" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Int16" DataType="Int16" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Int16</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="INT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Int16" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2030" BrowseName="1:GVL_mapping_with_nodeset.stat_UA_OptionSet_Sample" DataType="ns=2;s=#Type|UA_OptionSet_Sample" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_UA_OptionSet_Sample</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1016</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UA_OptionSet" AdsByteLength="4" AdsSymbolName="GVL_mapping_with_nodeset.stat_UA_OptionSet_Sample" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2031" BrowseName="1:GVL_library_tc3_opcua.stat_UA_SByte" DataType="SByte" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_SByte</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="SINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_SByte" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2032" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_LWORD" DataType="UInt64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_LWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LWORD" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_LWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2033" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_R4" DataType="Float" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_R4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="REAL" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_R4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2034" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_R8" DataType="Double" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_R8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LREAL" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_R8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2035" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_TIME" DataType="Int64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2036" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_TIME_OF_DAY" DataType="UInt32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_TIME_OF_DAY</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME_OF_DAY" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_TIME_OF_DAY" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2037" BrowseName="1:GVL_library_tc3_opcua.stat_UA_String" DataType="String" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_String</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="STRING" AdsByteLength="81" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_String" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2039" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_UI1" DataType="Byte" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_UI1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="USINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_UI1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2040" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_UI2" DataType="UInt16" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_UI2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_UI2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2041" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_UI4" DataType="UInt32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_UI4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UDINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_UI4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2042" BrowseName="1:GVL_library_tc3_opcua.stat_UA_UInt16" DataType="UInt16" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_UInt16</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_UInt16" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2043" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_UI8" DataType="UInt64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_UI8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="ULINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_UI8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2044" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_WORD" DataType="UInt16" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_WORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WORD" ArrayDimensions="11" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_WORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2045" BrowseName="1:GVL_nodes_dynamic.dyn_1dim_WSTRING" DataType="String" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_1dim_WSTRING</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1009</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_nodes_dynamic.dyn_1dim_WSTRING" AdsType="WSTRING" AdsByteLength="162" ArrayDimensions="11" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2046" BrowseName="1:GVL_library_tc3_opcua.stat_UA_UInt32" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_UInt32</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UDINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_UInt32" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2047" BrowseName="1:GVL_library_tc3_opcua.stat_UA_UInt64" DataType="UInt64" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_UInt64</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="ULINT" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_UInt64" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2049" BrowseName="1:GVL_library_tc3_opcua.stat_UA_EUInformation" DataType="i=887" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_EUInformation</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1016</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UA_EUInformation" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_EUInformation" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2050" BrowseName="1:GVL_library_tc3_opcua.stat_UA_LocalizedText" DataType="LocalizedText" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_LocalizedText</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1016</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UA_LocalizedText" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_LocalizedText" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2051" BrowseName="1:GVL_library_tc3_opcua.stat_UA_NodeId" DataType="NodeId" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_NodeId</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1016</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UA_NodeId" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_NodeId" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2052" BrowseName="1:GVL_library_tc3_opcua.stat_UA_Range" DataType="i=884" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_Range</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1016</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UA_Range" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_Range" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2053" BrowseName="1:GVL_library_tc3_opcua.stat_UA_TimeZoneDataType" DataType="i=8912" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_TimeZoneDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1016</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UA_TimeZoneDataType" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_TimeZoneDataType" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2054" BrowseName="1:GVL_library_tc3_opcua.stat_UA_LocaleID" DataType="i=295" AccessLevel="3">
+    <DisplayName>GVL_library_tc3_opcua.stat_UA_LocaleID</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1018</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="STRING" AdsByteLength="7" AdsSymbolName="GVL_library_tc3_opcua.stat_UA_LocaleID"></TcUaVariableInfo>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2056" BrowseName="InputArguments" ParentNodeId="ns=1;i=7001" DataType="Argument" ValueRank="1" ArrayDimensions="4" AccessLevel="3">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7001</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn1</Name>
+              <DataType>
+                <Identifier>i=1</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn2</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn3</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn4</Name>
+              <DataType>
+                <Identifier>ns=2;i=3001</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2057" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_I2" DataType="Int16" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_I2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="INT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_I2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2058" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_I4" DataType="Int32" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_I4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_I4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2059" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7001" DataType="Argument" ValueRank="1" ArrayDimensions="4" AccessLevel="3">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7001</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut1</Name>
+              <DataType>
+                <Identifier>i=1</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut2</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut3</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut4</Name>
+              <DataType>
+                <Identifier>ns=2;i=3001</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2060" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_I8" DataType="Int64" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_I8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_I8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2063" BrowseName="InputArguments" ParentNodeId="ns=1;i=7002" DataType="Argument" ValueRank="1" ArrayDimensions="1" AccessLevel="3">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7002</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>StructuredArgIn</Name>
+              <DataType>
+                <Identifier>ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_1</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2067" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7002" DataType="Argument" ValueRank="1" ArrayDimensions="1" AccessLevel="3">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7002</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>StructuredArgOut</Name>
+              <DataType>
+                <Identifier>ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_1</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2069" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_LWORD" DataType="UInt64" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_LWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LWORD" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_LWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2070" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_R4" DataType="Float" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_R4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="REAL" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_R4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2071" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_R8" DataType="Double" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_R8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LREAL" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_R8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2072" BrowseName="InputArguments" ParentNodeId="ns=1;i=7003" DataType="Argument" ValueRank="1" ArrayDimensions="4" AccessLevel="3">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7003</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn1</Name>
+              <DataType>
+                <Identifier>i=1</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn2</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn3</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgIn4</Name>
+              <DataType>
+                <Identifier>ns=2;i=3001</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2073" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_TIME" DataType="Int64" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2074" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_TIME_OF_DAY" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_TIME_OF_DAY</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME_OF_DAY" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_TIME_OF_DAY" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2076" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_UI1" DataType="Byte" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_UI1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="USINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_UI1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2077" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7003" DataType="Argument" ValueRank="1" ArrayDimensions="4" AccessLevel="3">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7003</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut1</Name>
+              <DataType>
+                <Identifier>i=1</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut2</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut3</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SimpleArgOut4</Name>
+              <DataType>
+                <Identifier>ns=2;i=3001</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2078" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_BOOL" DataType="Boolean" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_BOOL</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BOOL" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_BOOL" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2079" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_UI2" DataType="UInt16" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_UI2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_UI2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2080" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_BOOL_trigger" DataType="Boolean" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_BOOL_trigger</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BOOL" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_BOOL_trigger" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2081" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_UI4" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_UI4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UDINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_UI4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2082" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_STR" DataType="String" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_STR</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="STRING" AdsByteLength="81" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_STR" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2083" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_UI8" DataType="UInt64" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_UI8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="ULINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_UI8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2084" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_BYTE" DataType="Byte" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_BYTE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BYTE" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_BYTE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2085" BrowseName="InputArguments" ParentNodeId="ns=1;i=7004" DataType="Argument" ValueRank="1" ArrayDimensions="1" AccessLevel="3">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7004</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>StructuredArgIn</Name>
+              <DataType>
+                <Identifier>ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_1</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2086" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_WORD" DataType="UInt16" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_WORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WORD" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_WORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2087" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_WSTRING" DataType="String" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_WSTRING</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WSTRING" AdsByteLength="162" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_WSTRING" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2088" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_DATE" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_DATE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_DATE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2089" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_DATE_AND_TIME" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_DATE_AND_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_DATE_AND_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2090" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_DWORD" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_DWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DWORD" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_DWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2091" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7004" DataType="Argument" ValueRank="1" ArrayDimensions="1" AccessLevel="3">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7004</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>StructuredArgOut</Name>
+              <DataType>
+                <Identifier>ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_1</Identifier>
+              </DataType>
+              <ValueRank>1</ValueRank>
+              <ArrayDimensions>
+                <UInt32>10</UInt32>
+              </ArrayDimensions>
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2094" BrowseName="1:GVL_nodes_dynamic.dyn_scalar_I1" DataType="SByte" AccessLevel="3">
+    <DisplayName>GVL_nodes_dynamic.dyn_scalar_I1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="SINT" AdsSymbolName="GVL_nodes_dynamic.dyn_scalar_I1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2151" BrowseName="1:GVL_nodes_static.stat_scalar_BOOL" DataType="Boolean" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_BOOL</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BOOL" AdsSymbolName="GVL_nodes_static.stat_scalar_BOOL" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2152" BrowseName="1:GVL_nodes_static.stat_scalar_STR" DataType="String" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_STR</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="STRING" AdsByteLength="81" AdsSymbolName="GVL_nodes_static.stat_scalar_STR" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2153" BrowseName="1:GVL_nodes_static.stat_scalar_BYTE" DataType="Byte" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_BYTE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BYTE" AdsSymbolName="GVL_nodes_static.stat_scalar_BYTE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2154" BrowseName="1:GVL_nodes_static.stat_scalar_DATE" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_DATE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE" AdsSymbolName="GVL_nodes_static.stat_scalar_DATE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2155" BrowseName="1:GVL_nodes_static.stat_scalar_DATE_AND_TIME" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_DATE_AND_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" AdsSymbolName="GVL_nodes_static.stat_scalar_DATE_AND_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2156" BrowseName="1:GVL_nodes_static.stat_scalar_DT" DataType="DateTime" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_DT</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" AdsSymbolName="GVL_nodes_static.stat_scalar_DT" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2157" BrowseName="1:GVL_nodes_static.stat_scalar_DWORD" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_DWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DWORD" AdsSymbolName="GVL_nodes_static.stat_scalar_DWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2158" BrowseName="1:GVL_nodes_static.stat_scalar_I1" DataType="SByte" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_I1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="SINT" AdsSymbolName="GVL_nodes_static.stat_scalar_I1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2159" BrowseName="1:GVL_nodes_static.stat_scalar_I2" DataType="Int16" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_I2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="INT" AdsSymbolName="GVL_nodes_static.stat_scalar_I2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2160" BrowseName="1:GVL_nodes_static.stat_scalar_I4" DataType="Int32" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_I4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DINT" AdsSymbolName="GVL_nodes_static.stat_scalar_I4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2161" BrowseName="1:GVL_nodes_static.stat_scalar_I8" DataType="Int64" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_I8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LINT" AdsSymbolName="GVL_nodes_static.stat_scalar_I8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2168" BrowseName="1:GVL_nodes_static.stat_scalar_LWORD" DataType="UInt64" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_LWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LWORD" AdsSymbolName="GVL_nodes_static.stat_scalar_LWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2169" BrowseName="1:GVL_nodes_static.stat_scalar_R4" DataType="Float" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_R4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="REAL" AdsSymbolName="GVL_nodes_static.stat_scalar_R4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2170" BrowseName="1:GVL_nodes_static.stat_scalar_R8" DataType="Double" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_R8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LREAL" AdsSymbolName="GVL_nodes_static.stat_scalar_R8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2171" BrowseName="1:GVL_nodes_static.stat_scalar_TIME" DataType="Int64" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME" AdsSymbolName="GVL_nodes_static.stat_scalar_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2172" BrowseName="1:GVL_nodes_static.stat_scalar_TIME_OF_DAY" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_TIME_OF_DAY</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME_OF_DAY" AdsSymbolName="GVL_nodes_static.stat_scalar_TIME_OF_DAY" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2174" BrowseName="1:GVL_nodes_static.stat_scalar_UI1" DataType="Byte" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_UI1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="USINT" AdsSymbolName="GVL_nodes_static.stat_scalar_UI1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2175" BrowseName="1:GVL_nodes_static.stat_scalar_UI2" DataType="UInt16" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_UI2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UINT" AdsSymbolName="GVL_nodes_static.stat_scalar_UI2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2176" BrowseName="1:GVL_nodes_static.stat_scalar_UI4" DataType="UInt32" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_UI4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UDINT" AdsSymbolName="GVL_nodes_static.stat_scalar_UI4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2177" BrowseName="1:GVL_nodes_static.stat_scalar_UI8" DataType="UInt64" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_UI8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="ULINT" AdsSymbolName="GVL_nodes_static.stat_scalar_UI8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2178" BrowseName="1:GVL_nodes_static.stat_scalar_WORD" DataType="UInt16" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_WORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WORD" AdsSymbolName="GVL_nodes_static.stat_scalar_WORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2179" BrowseName="1:GVL_nodes_static.stat_scalar_WSTRING" DataType="String" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_scalar_WSTRING</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1005</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WSTRING" AdsByteLength="162" AdsSymbolName="GVL_nodes_static.stat_scalar_WSTRING" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2238" BrowseName="1:GVL_nodes_static.stat_1dim_WSTRING" DataType="String" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_WSTRING</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WSTRING" ArrayDimensions="11" AdsByteLength="162" AdsSymbolName="GVL_nodes_static.stat_1dim_WSTRING" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2239" BrowseName="1:GVL_nodes_static.stat_1dim_WORD" DataType="UInt16" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_WORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="WORD" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_WORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2240" BrowseName="1:GVL_nodes_static.stat_1dim_UI8" DataType="UInt64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_UI8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="ULINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_UI8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2241" BrowseName="1:GVL_nodes_static.stat_1dim_UI4" DataType="UInt32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_UI4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UDINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_UI4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2242" BrowseName="1:GVL_nodes_static.stat_1dim_UI2" DataType="UInt16" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_UI2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="UINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_UI2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2243" BrowseName="1:GVL_nodes_static.stat_1dim_UI1" DataType="Byte" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_UI1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="USINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_UI1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2245" BrowseName="1:GVL_nodes_static.stat_1dim_TIME_OF_DAY" DataType="UInt32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_TIME_OF_DAY</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME_OF_DAY" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_TIME_OF_DAY" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2246" BrowseName="1:GVL_nodes_static.stat_1dim_TIME" DataType="Int64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="TIME" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2247" BrowseName="1:GVL_nodes_static.stat_1dim_R8" DataType="Double" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_R8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LREAL" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_R8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2248" BrowseName="1:GVL_nodes_static.stat_1dim_R4" DataType="Float" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_R4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="REAL" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_R4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2249" BrowseName="1:GVL_nodes_static.stat_1dim_LWORD" DataType="UInt64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_LWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LWORD" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_LWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2256" BrowseName="1:GVL_nodes_static.stat_1dim_I8" DataType="Int64" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_I8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="LINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_I8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2257" BrowseName="1:GVL_nodes_static.stat_1dim_I4" DataType="Int32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_I4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_I4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2258" BrowseName="1:GVL_nodes_static.stat_1dim_I2" DataType="Int16" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_I2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="INT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_I2" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2259" BrowseName="1:GVL_nodes_static.stat_1dim_I1" DataType="SByte" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_I1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="SINT" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_I1" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2260" BrowseName="1:GVL_nodes_static.stat_1dim_DWORD" DataType="UInt32" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_DWORD</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DWORD" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_DWORD" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2261" BrowseName="1:GVL_nodes_static.stat_1dim_DT" DataType="DateTime" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_DT</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_DT" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2262" BrowseName="1:GVL_nodes_static.stat_1dim_DATE_AND_TIME" DataType="DateTime" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_DATE_AND_TIME</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE_AND_TIME" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_DATE_AND_TIME" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2263" BrowseName="1:GVL_nodes_static.stat_1dim_DATE" DataType="DateTime" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_DATE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="DATE" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_DATE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2264" BrowseName="1:GVL_nodes_static.stat_1dim_BYTE" DataType="Byte" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_BYTE</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BYTE" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_BYTE" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2265" BrowseName="1:GVL_nodes_static.stat_1dim_STR" DataType="String" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_STR</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="STRING" ArrayDimensions="11" AdsByteLength="81" AdsSymbolName="GVL_nodes_static.stat_1dim_STR" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2266" BrowseName="1:GVL_nodes_static.stat_1dim_BOOL" DataType="Boolean" ValueRank="1" ArrayDimensions="11" AccessLevel="3">
+    <DisplayName>GVL_nodes_static.stat_1dim_BOOL</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsType="BOOL" ArrayDimensions="11" AdsSymbolName="GVL_nodes_static.stat_1dim_BOOL" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2267" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType9" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_9" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType9</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType9" AdsType="BIGTYPE" AdsByteLength="5" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2268" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType9" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_9" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType9</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType9" AdsType="BIGTYPE" AdsByteLength="5" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2278" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType1" DataType="ST_Complex_1" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType1" AdsType="BIGTYPE" AdsByteLength="93" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2279" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType3" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_3" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType3" AdsType="BIGTYPE" AdsByteLength="8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2280" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType2" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_2" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType2" AdsType="BIGTYPE" AdsByteLength="1069" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2281" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType4" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_4" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType4" AdsType="BIGTYPE" AdsByteLength="4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2282" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType5" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_5" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType5</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType5" AdsType="BIGTYPE" AdsByteLength="102" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2283" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType6" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_6" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType6</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType6" AdsType="BIGTYPE" AdsByteLength="21" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2284" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType7" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_7" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType7</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType7" AdsType="BIGTYPE" AdsByteLength="16" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2285" BrowseName="1:GVL_mapping_with_nodeset.dyn_structuredType8" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_8" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.dyn_structuredType8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.dyn_structuredType8" AdsType="BIGTYPE" AdsByteLength="697" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2287" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType1" DataType="ST_Complex_1" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType1" AdsType="BIGTYPE" AdsByteLength="93" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2288" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType2" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_2" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType2" AdsType="BIGTYPE" AdsByteLength="1069" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2289" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType3" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_3" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType3" AdsType="BIGTYPE" AdsByteLength="8" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2290" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType4" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_4" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType4" AdsType="BIGTYPE" AdsByteLength="4" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2291" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType5" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_5" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType5</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType5" AdsType="BIGTYPE" AdsByteLength="102" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2292" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType6" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_6" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType6</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType6" AdsType="BIGTYPE" AdsByteLength="21" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2293" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType7" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_7" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType7</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType7" AdsType="BIGTYPE" AdsByteLength="16" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=2294" BrowseName="1:GVL_mapping_with_nodeset.stat_structuredType8" DataType="ns=2;s=&lt;StructuredDataType&gt;:ST_Complex_8" AccessLevel="3">
+    <DisplayName>GVL_mapping_with_nodeset.stat_structuredType8</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaVariableInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.stat_structuredType8" AdsType="BIGTYPE" AdsByteLength="697" />
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7000" BrowseName="2:Method1_WithoutArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method1_WithoutArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaMethodInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.MyObjectWithMethods.Method1_WithoutArguments">
+          <InputArguments Count="0" />
+          <OutputArguments Count="0" />
+        </TcUaMethodInfo>
+      </Extension>
+    </Extensions>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7001" BrowseName="2:Method2_WithSimpleArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method2_WithSimpleArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=2056</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=2059</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaMethodInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.MyObjectWithMethods.Method2_WithSimpleArguments">
+          <InputArguments Count="4">
+            <Arg UaArgumentIndex="0" AdsType="BOOL" />
+            <Arg UaArgumentIndex="1" AdsType="INT" />
+            <Arg UaArgumentIndex="2" AdsType="STRING" AdsByteLength="81" />
+            <Arg UaArgumentIndex="3" AdsType="DINT" />
+          </InputArguments>
+          <OutputArguments Count="4">
+            <Arg UaArgumentIndex="0" AdsType="BOOL" />
+            <Arg UaArgumentIndex="1" AdsType="INT" />
+            <Arg UaArgumentIndex="2" AdsType="STRING" AdsByteLength="81" />
+            <Arg UaArgumentIndex="3" AdsType="DINT" />
+          </OutputArguments>
+        </TcUaMethodInfo>
+      </Extension>
+    </Extensions>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7002" BrowseName="2:Method3_WithStructuredArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method3_WithStructuredArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=2063</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=2067</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaMethodInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.MyObjectWithMethods.Method3_WithStructuredArguments">
+          <InputArguments Count="1">
+            <Arg UaArgumentIndex="0" AdsType="BIGTYPE" AdsByteLength="93" UaStructureDefinition="ns='http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/';s=&lt;StructuredDataType&gt;:ST_Complex_1" />
+          </InputArguments>
+          <OutputArguments Count="1">
+            <Arg UaArgumentIndex="0" AdsType="BIGTYPE" AdsByteLength="93" UaStructureDefinition="ns='http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/';s=&lt;StructuredDataType&gt;:ST_Complex_1" />
+          </OutputArguments>
+        </TcUaMethodInfo>
+      </Extension>
+    </Extensions>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7003" BrowseName="2:Method4_WithArrayOfSimpleArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method4_WithArrayOfSimpleArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=2072</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=2077</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaMethodInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.MyObjectWithMethods.Method4_WithArrayOfSimpleArguments">
+          <InputArguments Count="4">
+            <Arg UaArgumentIndex="0" AdsType="BOOL" ArrayDimensions="10" />
+            <Arg UaArgumentIndex="1" AdsType="INT" ArrayDimensions="10" />
+            <Arg UaArgumentIndex="2" AdsType="STRING" AdsByteLength="81" ArrayDimensions="10" />
+            <Arg UaArgumentIndex="3" AdsType="DINT" ArrayDimensions="10" />
+          </InputArguments>
+          <OutputArguments Count="4">
+            <Arg UaArgumentIndex="0" AdsType="BOOL" ArrayDimensions="10" />
+            <Arg UaArgumentIndex="1" AdsType="INT" ArrayDimensions="10" />
+            <Arg UaArgumentIndex="2" AdsType="STRING" AdsByteLength="81" ArrayDimensions="10" />
+            <Arg UaArgumentIndex="3" AdsType="DINT" ArrayDimensions="10" />
+          </OutputArguments>
+        </TcUaMethodInfo>
+      </Extension>
+    </Extensions>
+  </UAMethod>
+  <UAMethod NodeId="ns=1;i=7004" BrowseName="2:Method5_WithArrayOfStructuredArguments" ParentNodeId="ns=1;i=1003">
+    <DisplayName>Method5_WithArrayOfStructuredArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=2085</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=2091</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TcUaMethodInfo AdsDevice="0" AdsSymbolName="GVL_mapping_with_nodeset.MyObjectWithMethods.Method5_WithArrayOfStructuredArguments">
+          <InputArguments Count="1">
+            <Arg UaArgumentIndex="0" AdsType="BIGTYPE" AdsByteLength="93" UaStructureDefinition="ns='http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/';s=&lt;StructuredDataType&gt;:ST_Complex_1" ArrayDimensions="10" />
+          </InputArguments>
+          <OutputArguments Count="1">
+            <Arg UaArgumentIndex="0" AdsType="BIGTYPE" AdsByteLength="93" UaStructureDefinition="ns='http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/';s=&lt;StructuredDataType&gt;:ST_Complex_1" ArrayDimensions="10" />
+          </OutputArguments>
+        </TcUaMethodInfo>
+      </Extension>
+    </Extensions>
+  </UAMethod>
+</UANodeSet>
