@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{A2DF9140-A915-47B1-9901-35CC79B09E92}" PersistentType="true">TutorialClass</Name>
+			<DisplayName TxtId=""><![CDATA[My event class]]></DisplayName>
+			<EventId>
+				<Name Id="911">Event</Name>
+				<DisplayName TxtId=""><![CDATA[Event_DisplayText]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="2">Alarm</Name>
+				<DisplayName TxtId=""><![CDATA[My alarm message]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<Hides>
+				<Hide GUID="{BC7921A7-97BB-4964-8468-5B7A17AF8EC1}"/>
+			</Hides>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{46F57825-3085-4014-A591-E4DD7F71DEE3}" Target64Bit="true" ShowHideConfigurations="#x106">
+		<System>
+			<Settings MaxCpus="8"/>
+			<Licenses>
+				<Target>
+					<ManualSelect>{AB888AB9-F2E3-43AE-8FAA-E294BDCE1FEA}</ManualSelect>
+					<ManualSelect>{BDCC0070-42D5-49AE-ABF1-1D4434813D60}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>Task1</Name>
+				</Task>
+				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" AdtTasks="true">
+					<Name>Task2</Name>
+				</Task>
+				<Task Id="5" Priority="22" CycleTime="100000" AmsPort="352" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{B51F9A5D-57DC-4E81-917D-52466A79C949}" Name="ServerMappingSampleProject" PrjFilePath="ServerMappingSampleProject\ServerMappingSampleProject.plcproj" TmcFilePath="ServerMappingSampleProject\ServerMappingSampleProject.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{CB6FE08A-4E67-13D2-8645-B455CCB7DC62}" TmcPath="ServerMappingSampleProject\ServerMappingSampleProject.tmc">
+					<Name>ServerMappingSampleProject Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project GUID="{3C35977C-AC33-4BFC-A8D4-1586783F6F76}" Name="ServerMappingSampleProject_PLC2" PrjFilePath="ServerMappingSampleProject_PLC2\ServerMappingSampleProject_PLC2.plcproj" TmcFilePath="ServerMappingSampleProject_PLC2\ServerMappingSampleProject_PLC2.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{29F0AA54-F307-B2F9-0FD6-7F721DE4B8F3}" TmcPath="ServerMappingSampleProject_PLC2\ServerMappingSampleProject_PLC2.tmc">
+					<Name>ServerMappingSampleProject_PLC2 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010050</OTCID>
+							</ManualConfig>
+							<Priority>22</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="22" OTCID="#x08502041"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

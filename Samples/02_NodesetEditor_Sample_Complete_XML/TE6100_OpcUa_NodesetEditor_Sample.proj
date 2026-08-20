@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ExportDir>Export</ExportDir>
+  <LocalOpcUaServer>[ProgramFilesX86]TwinCAT\Functions\TF6100-OPC-UA\Win64\Server\</LocalOpcUaServer>
+  <Nodesets>
+    <Nodeset Path="TE6100_OpcUa_NodesetEditor_Sample_Instances.xml">
+      <Model ModelUri="http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Instances/" Version="1.0.0" PublicationDate="2025-03-21T11:23:02Z" Editable="true" />
+    </Nodeset>
+    <Nodeset Path="Type Project\TE6100_OpcUa_NodesetEditor_Sample_Types.xml">
+      <Model ModelUri="http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/" Version="1.0.0" PublicationDate="2025-03-21T10:26:39Z" />
+    </Nodeset>
+  </Nodesets>
+</Project>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_ObjectWithMethods_NodeSetMapping" Id="{453f55db-564f-4195-94ec-f998ae3282ee}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ObjectWithMethods_NodeSetMapping
+VAR
+	Method1_WithoutArguments 						: FB_Method1_WithoutArguments;
+	Method2_WithSimpleArguments            			: FB_Method2_WithSimpleArguments;
+	Method3_WithStructuredArguments        			: FB_Method3_WithStructuredArguments;
+	Method4_WithArrayOfSimpleArguments     			: FB_Method4_WithArrayOfSimpleArguments;
+	Method5_WithArrayOfStructuredArguments 			: FB_Method5_WithArrayOfStructuredArguments;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Method1_WithoutArguments(); 				
+Method2_WithSimpleArguments();            	
+Method3_WithStructuredArguments();        	
+Method4_WithArrayOfSimpleArguments();     	
+Method5_WithArrayOfStructuredArguments(); 		]]></ST>
+    </Implementation>
+    <LineIds Name="FB_ObjectWithMethods_NodeSetMapping">
+      <LineId Id="1" Count="4" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

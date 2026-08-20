@@ -1,0 +1,25 @@
+###########################
+# UaModeler Project File  #
+# Generated at 19.09.2023 #
+###########################
+
+PROJECTNAME = TE6100_QuickStart_CompanionSpecification
+
+TEMPLATESET = ($TEMPLATES)/modeling/v1_0/t0/modeling.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    te6100_quickstart_companionspecification.ua
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    te6100_quickstart_companionspecification.ua: #008000
+
+OUTPUTPATH = 
+
+GENERATE += te6100_quickstart_companionspecification.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+

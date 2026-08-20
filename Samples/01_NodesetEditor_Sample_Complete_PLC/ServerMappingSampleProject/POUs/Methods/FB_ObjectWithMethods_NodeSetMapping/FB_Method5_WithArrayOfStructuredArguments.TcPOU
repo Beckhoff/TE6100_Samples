@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Method5_WithArrayOfStructuredArguments" Id="{5a6a7815-c959-4397-9405-d21f10b717a0}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'OPC.UA.DA.JobMethod' := 'Method5_WithArrayOfStructuredArguments'}
+FUNCTION_BLOCK PUBLIC FB_Method5_WithArrayOfStructuredArguments
+VAR
+	// Timer to simulate job execution
+	timer : TON := (PT:=T#4S);
+	
+	// Variables to determine if a job has been started (Start() method has been called) or finished
+	jobRunning : BOOL;
+
+	// State machine variable
+	state : UDINT;
+	
+	//Values of method specific input parameters:
+	aArgIn : ARRAY [1..10] OF ST_Complex_1;
+	
+	//Values of method specific output parameters:
+	aArgOut : ARRAY [1..10] OF ST_Complex_1;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE state OF
+	0:
+		IF jobRunning THEN
+			state := state + 1;
+		END_IF
+		
+	1:	//Logic of method in here:
+		timer(IN:=TRUE);
+		IF timer.Q THEN
+			
+			//Set Inputs To Outputs
+			aArgOut := aArgIn;
+			
+			timer(IN:=FALSE);
+			jobRunning := FALSE;
+			state := 0;
+		END_IF
+		
+END_CASE]]></ST>
+    </Implementation>
+    <Method Name="Abort" Id="{c1a31d5c-776a-496b-8ffa-bce0a470fae4}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC Abort : HRESULT
+VAR_INPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="CheckState" Id="{e8986ba9-6dc2-40c0-8b32-59f9449a1b8d}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC CheckState : HRESULT
+VAR_INPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR
+VAR_OUTPUT
+	bBusy : BOOL; // Do not change. Used by server to find out if the job is finished
+	
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_1'}
+	{attribute 'pack_mode' := '1'}
+	StructuredArgOut : ARRAY [1..10] OF ST_Complex_1;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF hdl <> 16#BE6780FF THEN
+	CheckState := OpcUaStatusCodes.BadInternalError; //Set return value of method
+ELSIF jobRunning THEN
+	bBusy := TRUE; // job is not finished yet
+	CheckState := OpcUaStatusCodes.Good; // done, no error occured during execution (OPC UA StatusCode "GOOD")
+ELSE
+	//Give values to outputs
+	StructuredArgOut := aArgOut;	
+	
+	bBusy := FALSE; // job is finished
+	CheckState := OpcUaStatusCodes.Good; // done, no error occured during execution (OPC UA StatusCode "GOOD")
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{8c69d4c3-493c-4687-bcc0-e8ac72785a6b}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC Start : HRESULT
+VAR_INPUT
+	{attribute 'OPC.UA.DA' := '1'}
+	{attribute 'OPC.UA.DA.StructuredType' := '1'}
+	{attribute 'OPC.UA.AdditionalStructuredType.NamespaceName' := 'http://beckhoff.com/UA/TE6100_OpcUa_NodesetEditor_Sample_Types/'}
+	{attribute 'OPC.UA.AdditionalStructuredType.Id' := 's=<StructuredDataType>:ST_Complex_1'}
+	{attribute 'pack_mode' := '1'}
+	StructuredArgIn : ARRAY [1..10] OF ST_Complex_1;
+END_VAR
+VAR_OUTPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF jobRunning THEN
+	Start := OpcUaStatusCodes.Bad;
+ELSE
+	//Give inputs to functionblock body
+	aArgIn := StructuredArgIn;	
+	
+	hdl := 16#BE6780FF; //static because concurrent calls are disabled by checking jobRunning
+	jobRunning := TRUE;
+	Start := OpcUaStatusCodes.Good; //Set return value of method
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Method5_WithArrayOfStructuredArguments">
+      <LineId Id="24" Count="9" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="38" Count="6" />
+      <LineId Id="22" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Method5_WithArrayOfStructuredArguments.Abort">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Method5_WithArrayOfStructuredArguments.CheckState">
+      <LineId Id="26" Count="5" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="36" Count="4" />
+      <LineId Id="6" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Method5_WithArrayOfStructuredArguments.Start">
+      <LineId Id="22" Count="2" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="29" Count="4" />
+      <LineId Id="20" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

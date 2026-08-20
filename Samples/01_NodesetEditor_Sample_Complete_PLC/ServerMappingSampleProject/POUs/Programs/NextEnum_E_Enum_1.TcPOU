@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="NextEnum_E_Enum_1" Id="{7c6b5960-420c-4f69-a51f-8ef075e8e380}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION NextEnum_E_Enum_1 : E_Enum_1
+VAR_INPUT
+	cur : E_Enum_1;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE cur OF
+    E_Enum_1.ZERO:  NextEnum_E_Enum_1 := E_Enum_1.ONE;
+    E_Enum_1.ONE:   NextEnum_E_Enum_1 := E_Enum_1.TWO;
+    E_Enum_1.TWO:   NextEnum_E_Enum_1 := E_Enum_1.THREE;
+    E_Enum_1.THREE: NextEnum_E_Enum_1 := E_Enum_1.THIRTEEN;
+    E_Enum_1.THIRTEEN: NextEnum_E_Enum_1 := E_Enum_1.the_answer_to_life_the_universe_and_everything;
+ELSE
+    NextEnum_E_Enum_1 := E_Enum_1.ZERO;
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="NextEnum_E_Enum_1">
+      <LineId Id="1" Count="8" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

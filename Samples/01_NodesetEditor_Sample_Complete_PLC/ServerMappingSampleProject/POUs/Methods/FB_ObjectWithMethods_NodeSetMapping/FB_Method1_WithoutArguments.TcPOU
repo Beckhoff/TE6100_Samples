@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Method1_WithoutArguments" Id="{0c1a5ae4-e180-41d9-bb07-3ee5fb655e36}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'OPC.UA.DA.JobMethod' := 'Method1_WithoutArguments'}
+FUNCTION_BLOCK PUBLIC FB_Method1_WithoutArguments
+VAR
+	// Timer to simulate job execution
+	timer : TON := (PT:=T#4S);
+	
+	// Variables to determine if a job has been started (Start() method has been called) or finished
+	jobRunning : BOOL;
+	
+	// State machine variable
+	state : UDINT;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE state OF
+	0:
+		IF jobRunning THEN
+			state := state + 1;
+		END_IF
+		
+	1:	//Logic of method in here:
+		timer(IN:=TRUE);
+		IF timer.Q THEN
+			timer(IN:=FALSE);
+			jobRunning := FALSE;
+			state := 0;
+		END_IF
+		
+END_CASE]]></ST>
+    </Implementation>
+    <Method Name="Abort" Id="{80461610-bf85-4cd8-944e-cc592b017386}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC Abort : HRESULT
+VAR_INPUT
+  hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="CheckState" Id="{f1301117-9c6a-4549-9ed8-56ab2d8f367c}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC CheckState : HRESULT
+VAR_INPUT
+  hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR
+VAR_OUTPUT
+  bBusy : BOOL; // Do not change. Used by server to find out if the job is finished
+ //WithoutArguments
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF hdl <> 16#BE6780FF THEN
+	CheckState := OpcUaStatusCodes.BadInternalError; //Set return value of method
+ELSIF jobRunning THEN
+	bBusy := TRUE; // job is not finished yet
+	CheckState := OpcUaStatusCodes.Good; // done, no error occured during execution (OPC UA StatusCode "GOOD")
+ELSE
+	bBusy := FALSE; // job is finished
+	CheckState := OpcUaStatusCodes.Good; // done, no error occured during execution (OPC UA StatusCode "GOOD")
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{750f9858-dff3-45ac-ba9b-2bf2a2ad88c0}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable' := '1'}
+METHOD PUBLIC Start : HRESULT
+VAR_INPUT
+	//WithoutArguments
+END_VAR
+VAR_OUTPUT
+  	hdl : UDINT; // handle, can be used for concurrent calls
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF jobRunning THEN
+	Start := OpcUaStatusCodes.Bad;
+ELSE	
+	hdl := 16#BE6780FF; //static because concurrent calls are disabled by checking jobRunning
+	jobRunning := TRUE;
+	Start := OpcUaStatusCodes.Good; //Set return value of method
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Method1_WithoutArguments">
+      <LineId Id="1" Count="14" />
+    </LineIds>
+    <LineIds Name="FB_Method1_WithoutArguments.Abort">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Method1_WithoutArguments.CheckState">
+      <LineId Id="15" Count="5" />
+      <LineId Id="27" Count="2" />
+      <LineId Id="6" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Method1_WithoutArguments.Start">
+      <LineId Id="16" Count="2" />
+      <LineId Id="25" Count="2" />
+      <LineId Id="3" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

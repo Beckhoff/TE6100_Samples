@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="PRG_Static" Id="{b0e82972-5ed0-43dd-ad1d-5023445ae7be}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Static
+VAR
+	k: INT;
+	l: INT;
+	m: INT;
+	i : DINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(* Set scalar variables *)
+stat_scalar_BOOL 					:= TRUE;
+stat_scalar_I1 						:= -8;
+stat_scalar_UI1 					:= 8;
+stat_scalar_I2 						:= -16;
+stat_scalar_UI2 					:= 16;
+stat_scalar_I4 						:= -32;
+stat_scalar_UI4 					:= 32;
+stat_scalar_I8 						:= -64;
+stat_scalar_UI8 					:= 64;
+stat_scalar_BYTE 					:= 16#08;
+stat_scalar_WORD 					:= 16#0010;
+stat_scalar_DWORD 					:= 16#00000020;
+stat_scalar_LWORD 					:= 16#0000000000000040;
+stat_scalar_R4 						:= -32.32;
+stat_scalar_R8 						:= -64.64;
+stat_scalar_TIME 					:= T#1D2H30M40S500MS;
+stat_scalar_DATE 					:= D#1979-10-12;
+stat_scalar_TOD 					:= TOD#12:34:56.789;
+stat_scalar_TIME_OF_DAY 			:= TIME_OF_DAY#12:34:56.789;
+stat_scalar_DT 						:= DT#1979-10-12-12:34:56.789;
+stat_scalar_DATE_AND_TIME 			:= DT#1979-10-12-12:34:56;
+stat_scalar_STR 					:= 'This is a STRING';
+stat_scalar_WSTRING 				:= "This is a WSTRING";
+	
+(* Set scalar 1-dimensional arrays *)
+FOR k:= 0 TO ARRSIZEX DO
+	stat_1dim_BOOL[k] 					:= stat_scalar_BOOL; 					                                                          
+	stat_1dim_I1[k] 					:= stat_scalar_I1; 						                                                               
+	stat_1dim_UI1[k] 					:= stat_scalar_UI1; 					                                                             
+	stat_1dim_I2[k] 					:= stat_scalar_I2; 						                                                               
+	stat_1dim_UI2[k] 					:= stat_scalar_UI2; 					                                                             
+	stat_1dim_I4[k] 					:= stat_scalar_I4; 						                                                               
+	stat_1dim_UI4[k] 					:= stat_scalar_UI4;					                                                             
+	stat_1dim_I8[k] 					:= stat_scalar_I8; 						                                                               
+	stat_1dim_UI8[k] 					:= stat_scalar_UI8;					                                                             
+	stat_1dim_BYTE[k] 					:= stat_scalar_BYTE;					                                                          
+	stat_1dim_WORD[k] 					:= stat_scalar_WORD;					                                                          
+	stat_1dim_DWORD[k] 					:= stat_scalar_DWORD; 					                                                           
+	stat_1dim_LWORD[k] 					:= stat_scalar_LWORD; 					                                                           
+	stat_1dim_R4[k] 					:= stat_scalar_R4; 						                                                               
+	stat_1dim_R8[k] 					:= stat_scalar_R8; 						                                                               
+	stat_1dim_TIME[k] 					:= stat_scalar_TIME;				                                                           
+	stat_1dim_DATE[k] 					:= stat_scalar_DATE; 					                                                          				                                                           
+	stat_1dim_TOD[k] 					:= stat_scalar_TOD; 					                                                             
+	stat_1dim_TIME_OF_DAY[k] 			:= stat_scalar_TIME_OF_DAY; 			                                            			         
+	stat_1dim_DT[k] 					:= stat_scalar_DT; 						                        
+	stat_1dim_DATE_AND_TIME[k] 			:= stat_scalar_DATE_AND_TIME; 			       
+	stat_1dim_STR[k] 					:= stat_scalar_STR; 					                       
+	stat_1dim_WSTRING[k] 				:= stat_scalar_WSTRING; 				                          
+END_FOR	
+
+
+GVL_mapping_with_Nodeset.stat_structuredType1.x   := E_Enum_1.ONE;
+GVL_mapping_with_Nodeset.stat_structuredType1.a   := stat_scalar_I2;
+GVL_mapping_with_Nodeset.stat_structuredType1.str := stat_scalar_STR;
+GVL_mapping_with_Nodeset.stat_structuredType1.b   := stat_scalar_I4;
+
+(* ST_Complex_2 *) 
+GVL_mapping_with_Nodeset.stat_structuredType2.c1 := GVL_mapping_with_Nodeset.stat_structuredType1;
+GVL_mapping_with_Nodeset.stat_structuredType2.s_5 := 'ABCDE';
+GVL_mapping_with_Nodeset.stat_structuredType2.e   := E_Enum_1.TWO;
+GVL_mapping_with_Nodeset.stat_structuredType2.s_3 := 'XYZ';
+FOR i := LOWER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType2.cArr, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType2.cArr, 1) DO
+	GVL_mapping_with_Nodeset.stat_structuredType2.cArr[i] := GVL_mapping_with_Nodeset.stat_structuredType1;
+	GVL_mapping_with_Nodeset.stat_structuredType2.cArr[i].a := stat_scalar_I4 - i * 1000;
+	GVL_mapping_with_Nodeset.stat_structuredType2.cArr[i].b := stat_scalar_I4 - i * 10000;
+	GVL_mapping_with_Nodeset.stat_structuredType2.cArr[i].x := E_Enum_1.ZERO;
+	GVL_mapping_with_Nodeset.stat_structuredType2.cArr[i].str := stat_scalar_STR;
+END_FOR
+FOR i := LOWER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType2.iArr, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType2.iArr, 1) DO
+	GVL_mapping_with_Nodeset.stat_structuredType2.iArr[i] := i;
+END_FOR
+
+(* ST_Complex_3 *) 
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.port := stat_scalar_UI2;
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.netId[0] := 10;
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.netId[1] := 10;
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.netId[2] := 10;
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.netId[3] := 10;
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.netId[4] := 1;
+GVL_mapping_with_Nodeset.stat_structuredType3.stAmsAddr.netId[5] := 1;
+
+(* ST_Complex_4 *) 
+GVL_mapping_with_Nodeset.stat_structuredType4.ErrorID := E_Enum_1.THIRTEEN;
+
+(* ST_Complex_5 *) 
+GVL_mapping_with_Nodeset.stat_structuredType5.a := stat_scalar_I2;
+GVL_mapping_with_Nodeset.stat_structuredType5.b := stat_scalar_I4;
+GVL_mapping_with_Nodeset.stat_structuredType5.c := stat_scalar_R4;
+GVL_mapping_with_Nodeset.stat_structuredType5.d := stat_scalar_R8;
+GVL_mapping_with_Nodeset.stat_structuredType5.e := stat_scalar_STR;
+GVL_mapping_with_Nodeset.stat_structuredType5.f := stat_scalar_I2;
+GVL_mapping_with_Nodeset.stat_structuredType5.g := stat_scalar_BOOL;
+
+(* ST_Complex_6 *) 
+GVL_mapping_with_Nodeset.stat_structuredType6.a := stat_scalar_I2;
+GVL_mapping_with_Nodeset.stat_structuredType6.b := stat_scalar_I4;
+GVL_mapping_with_Nodeset.stat_structuredType6.c := stat_scalar_R4;
+GVL_mapping_with_Nodeset.stat_structuredType6.d := stat_scalar_R8;
+GVL_mapping_with_Nodeset.stat_structuredType6.e := stat_scalar_I2;
+GVL_mapping_with_Nodeset.stat_structuredType6.f := NOT stat_scalar_BOOL;
+
+(* ST_Complex_7 *) 
+GVL_mapping_with_Nodeset.stat_structuredType7.a := stat_scalar_R8;
+GVL_mapping_with_Nodeset.stat_structuredType7.b := stat_scalar_R4;
+GVL_mapping_with_Nodeset.stat_structuredType7.c := stat_scalar_R4;
+
+(* ST_Complex_8 *) 
+GVL_mapping_with_Nodeset.stat_structuredType8.stComplex  := GVL_mapping_with_Nodeset.stat_structuredType1;
+GVL_mapping_with_Nodeset.stat_structuredType8.strString5 := 'VWXYZ'; 
+GVL_mapping_with_Nodeset.stat_structuredType8.eEnum      := E_Enum_1.TWO;
+GVL_mapping_with_Nodeset.stat_structuredType8.strString3 := 'ABC';
+FOR i := LOWER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex, 1) DO
+	GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex[i] := GVL_mapping_with_Nodeset.stat_structuredType1;
+	GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex[i].a := stat_scalar_I4 - i * 1000;
+	GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex[i].b := stat_scalar_I4 - i * 10000;
+	GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex[i].x := E_Enum_1.ONE;
+	GVL_mapping_with_Nodeset.stat_structuredType8.arrComplex[i].str := stat_scalar_STR;
+END_FOR
+FOR i := LOWER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType8.arrDint, 1) TO UPPER_BOUND(GVL_mapping_with_Nodeset.stat_structuredType8.arrDint, 1) DO
+	GVL_mapping_with_Nodeset.stat_structuredType8.arrDint[i] := 10000 + i;
+END_FOR
+
+(* ST_Complex_9 *) 
+GVL_mapping_with_Nodeset.stat_structuredType9.bBool := stat_scalar_BOOL;
+GVL_mapping_with_Nodeset.stat_structuredType9.stOptionSetSample.BitOne.value := NOT stat_scalar_BOOL;
+GVL_mapping_with_Nodeset.stat_structuredType9.stOptionSetSample.BitOne.valid := stat_scalar_BOOL;
+GVL_mapping_with_Nodeset.stat_structuredType9.stOptionSetSample.BitTwo.value := stat_scalar_BOOL;
+GVL_mapping_with_Nodeset.stat_structuredType9.stOptionSetSample.BitTwo.valid := NOT stat_scalar_BOOL;
+
+(* ST_Complex_10 *)
+GVL_mapping_with_nodeset.stat_structuredType10.nNumber := GVL_mapping_with_nodeset.dyn_structuredType10.nNumber + 1;
+GVL_mapping_with_Nodeset.stat_structuredType10.nNumber := stat_scalar_UI4;
+GVL_mapping_with_Nodeset.stat_structuredType10.stEUInformation.sNamespaceUri := 'http://www.opcfoundation.org/UA/units/un/cefact';
+GVL_mapping_with_Nodeset.stat_structuredType10.stEUInformation.nUnitId := 4408652;
+GVL_mapping_with_Nodeset.stat_structuredType10.stEUInformation.sDisplayName.sLocaleId := 'en-US';
+GVL_mapping_with_Nodeset.stat_structuredType10.stEUInformation.sDisplayName.sText := 'degree Celsius';
+GVL_mapping_with_Nodeset.stat_structuredType10.stEUInformation.sDescription.sLocaleId := 'en-US';
+GVL_mapping_with_Nodeset.stat_structuredType10.stEUInformation.sDescription.sText := 'Degrees Celsius';
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_Static">
+      <LineId Id="512" Count="0" />
+      <LineId Id="410" Count="15" />
+      <LineId Id="427" Count="0" />
+      <LineId Id="429" Count="0" />
+      <LineId Id="432" Count="1" />
+      <LineId Id="438" Count="1" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="440" Count="0" />
+      <LineId Id="513" Count="0" />
+      <LineId Id="265" Count="0" />
+      <LineId Id="270" Count="0" />
+      <LineId Id="272" Count="2" />
+      <LineId Id="276" Count="11" />
+      <LineId Id="289" Count="0" />
+      <LineId Id="291" Count="1" />
+      <LineId Id="443" Count="1" />
+      <LineId Id="449" Count="1" />
+      <LineId Id="271" Count="0" />
+      <LineId Id="515" Count="0" />
+      <LineId Id="611" Count="5" />
+      <LineId Id="618" Count="4" />
+      <LineId Id="624" Count="6" />
+      <LineId Id="632" Count="3" />
+      <LineId Id="637" Count="38" />
+      <LineId Id="677" Count="6" />
+      <LineId Id="685" Count="10" />
+      <LineId Id="704" Count="1" />
+      <LineId Id="697" Count="6" />
+      <LineId Id="609" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

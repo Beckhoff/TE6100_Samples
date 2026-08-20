@@ -1,0 +1,25 @@
+###########################
+# UaModeler Project File  #
+# Generated at 14.08.2025 #
+###########################
+
+PROJECTNAME = TE6100_OpcUa_NodesetEditor_Sample
+
+TEMPLATESET = ($TEMPLATES)/modeling/v1_0/t0/modeling.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    TE6100_OpcUa_NodesetEditor_Sample_Types.ua
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    TE6100_OpcUa_NodesetEditor_Sample_Types.ua: #0000ff
+
+OUTPUTPATH = .
+
+GENERATE += TE6100_OpcUa_NodesetEditor_Sample_Types.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+
